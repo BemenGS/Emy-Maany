@@ -822,3 +822,18 @@ html[dir="rtl"] body.is-arabic .viewer-image-meta,html[dir="rtl"] body.is-arabic
 html[dir="rtl"] body.is-arabic .language-toggle{font-family:Tahoma,Arial,sans-serif;letter-spacing:0}
 html[dir="rtl"] body.is-arabic .back-to-top{right:auto;left:24px}
 @media(max-width:760px){.language-toggle{margin-inline:8px;padding:10px 13px}html[dir="rtl"] body.is-arabic .main-nav{align-items:stretch}}
+
+
+/* Mario-inspired compact language switcher, adapted to Emy Maany's champagne palette */
+.language-toggle{display:inline-flex;align-items:center;justify-content:center;gap:3px;flex:0 0 auto;width:76px;height:42px;padding:4px;border:1px solid rgba(215,193,159,.38);border-radius:999px;background:rgba(20,15,13,.32);color:#f5eee5;cursor:pointer;z-index:45;box-shadow:inset 0 0 0 1px rgba(255,255,255,.025);transition:border-color .25s,background .25s}
+.language-toggle:hover{border-color:#d7c19f;background:rgba(215,193,159,.10)}
+.language-toggle .lang-option{display:grid;place-items:center;width:31px;height:31px;border-radius:50%;font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.02em;color:#d8cbb9;transition:background .22s,color .22s,transform .22s}
+.language-toggle .lang-option.lang-ar{font-family:Tahoma,Arial,sans-serif;font-size:14px}
+.language-toggle .lang-option.is-active{background:#e8ddca;color:#2a211b;box-shadow:0 1px 5px rgba(0,0,0,.18)}
+.site-header .menu-toggle{order:1}
+.site-header .language-toggle{order:2;margin:0 10px}
+.site-header .brand{order:3}
+.site-header .main-nav{order:4}
+html[dir="rtl"] .site-header{direction:rtl}
+html[dir="ltr"] .site-header{direction:ltr}
+@media(max-width:800px){.site-header .language-toggle{width:72px;height:40px;margin-inline:7px;padding:3px}.site-header .language-toggle .lang-option{width:29px;height:29px}.site-header .menu-toggle{order:1}.site-header .language-toggle{order:2}.site-header .brand{order:3;margin-inline-start:auto}.site-header .main-nav{order:4}}
