@@ -1,6 +1,7 @@
 /* =========================================================
    EMY MAANY — PWA INSTALL EXPERIENCE
-   Native install prompt where supported; iOS home-screen guide otherwise.
+   Shows an in-site install banner even when Chrome suppresses
+   beforeinstallprompt; uses the native prompt whenever available.
    ========================================================= */
 (() => {
   "use strict";
@@ -62,19 +63,28 @@
       if (mode === "ios") {
         helpVisible = !helpVisible;
         help.hidden = !helpVisible;
-        help.textContent = "In Safari, tap Share (the square with the arrow), then choose “Add to Home Screen” and tap Add.";
+        help.textContent = "In Safari, tap Share (the square with the arrow), then choose ‘Add to Home Screen’ and tap Add.";
         install.textContent = helpVisible ? "Got it" : "How to";
         return;
       }
 
-      if (!deferredPrompt) return;
-      deferredPrompt.prompt();
-      const choice = await deferredPrompt.userChoice;
-      deferredPrompt = null;
-      if (choice && choice.outcome === "accepted") {
-        banner?.remove();
-        banner = null;
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        const choice = await deferredPrompt.userChoice;
+        deferredPrompt = null;
+        if (choice && choice.outcome === "accepted") {
+          banner?.remove();
+          banner = null;
+        }
+        return;
       }
+
+      // Chrome may expose “Install app” in its menu without dispatching
+      // beforeinstallprompt to the page. Give users the working manual route.
+      helpVisible = !helpVisible;
+      help.hidden = !helpVisible;
+      help.textContent = "To install: open Chrome’s ⋮ menu, tap ‘Install app’ (or ‘Add to Home screen’), then confirm Install.";
+      install.textContent = helpVisible ? "Got it" : "Install";
     });
 
     document.body.appendChild(banner);
@@ -92,12 +102,11 @@
     deferredPrompt = null;
   });
 
-  // Safari on iOS/iPadOS does not expose beforeinstallprompt.
-  if (isIOS) {
-    window.addEventListener("load", () => {
-      if (!isStandalone()) createBanner("ios");
-    }, { once: true });
-  }
+  window.addEventListener("load", () => {
+    if (isStandalone()) return;
+    if (isIOS) createBanner("ios");
+    else createBanner("native"); // Fallback banner; native prompt is used if available.
+  }, { once: true });
 
   // Register the service worker required for installability and offline shell.
   if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol)) {
