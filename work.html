@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Emy Maany event décor, bespoke cakes and catering.">
+  <title>Our Work | Emy Maany</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="work.css">
+</head>
+<body>
+  <!-- PRELOADER -->
+  <div class="preloader" aria-hidden="true">
+    <span class="preloader-mark">Emy Maany</span>
+    <span class="preloader-line"></span>
+  </div>
+  <!-- NAVIGATION -->
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-monogram">E</span><span class="brand-name">EMY <i>MAANY</i></span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+    <span></span>
+    <span></span>
+</button>
+    <nav class="main-nav"><a href="index.html">Home</a><a class="active" href="work.html">Our Work</a><a href="contact.html">Connect</a><a class="nav-cta" href="contact.html">Plan Your Event <span>↗</span></a></nav>
+  </header>
+
+  <main>
+    <!-- PAGE INTRO -->
+  <section class="work-hero"><div class="work-hero-bg"></div><div class="work-hero-content reveal"><span class="eyebrow">THE PORTFOLIO</span><h1>Made With Care.<br><em>Remembered Forever.</em></h1><p>Three Beautiful Ingredients. One Seamless Celebration.</p></div><span class="vertical-note">A CURATED COLLECTION / EMY MAANY</span></section>
+
+    <!-- DECORATIONS -->
+    <section class="portfolio-section section-pad" id="decorations">
+      <div class="section-top reveal"><span class="eyebrow">01 — THE SETTING</span><span class="section-count">01 / 03</span></div>
+      <div class="portfolio-intro reveal"><h2>Event <em>Decorations.</em></h2><p>We Transform Spaces into Atmospheres — from Intimate Tablescapes to Statement Installations. Every Colour, Texture and Finishing Touch has a Purpose.</p></div>
+      <!-- DECORATION COLLECTIONS: each card opens a complete photo group -->
+      <div class="collection-grid" data-collection="decorations" aria-label="Decoration collections"></div>
+    </section>
+
+    <!-- CAKES -->
+    <section class="portfolio-section cakes-section section-pad" id="cakes">
+      <div class="section-top reveal"><span class="eyebrow">02 — THE CENTREPIECE</span><span class="section-count">02 / 03</span></div>
+      <div class="portfolio-intro reveal"><h2>Bespoke <em>cakes.</em></h2><p>Designed around your occasion and finished with an eye for detail. Our cakes bring together beautiful presentation and a delicious centre.</p></div>
+      <!-- CAKE COLLECTIONS: each card opens a complete photo group -->
+      <div class="collection-grid" data-collection="cakes" aria-label="Cake collections"></div>
+    </section>
+
+    <!-- CATERING -->
+    <section class="portfolio-section section-pad" id="catering">
+      <div class="section-top reveal"><span class="eyebrow">03 — THE TABLE</span><span class="section-count">03 / 03</span></div>
+      <div class="portfolio-intro reveal"><h2>Thoughtful <em>catering.</em></h2><p>From graceful grazing tables to a beautifully presented menu, we make the food part of the occasion — generous, considered and full of flavour.</p></div>
+      <!-- CATERING COLLECTIONS: each card opens a complete photo group -->
+      <div class="collection-grid" data-collection="catering" aria-label="Catering collections"></div>
+    </section>
+
+
+    <!-- COLLECTION VIEWER: opens when a project group is selected -->
+    <div class="collection-viewer" id="collectionViewer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="viewerTitle">
+      <div class="viewer-backdrop" data-viewer-close></div>
+      <section class="viewer-panel">
+        <header class="viewer-header">
+          <div>
+            <span class="eyebrow" id="viewerCategory">THE COLLECTION</span>
+            <h2 id="viewerTitle">Project Title</h2>
+            <p id="viewerDescription"></p>
+          </div>
+          <button class="viewer-close" type="button" aria-label="Close collection" data-viewer-close>×</button>
+        </header>
+        <div class="viewer-feature">
+          <button class="viewer-arrow viewer-prev" type="button" aria-label="Previous image">‹</button>
+          <img id="viewerImage" src="" alt="">
+          <button class="viewer-arrow viewer-next" type="button" aria-label="Next image">›</button>
+        </div>
+        <div class="viewer-image-meta"><span id="viewerCaption"></span><span id="viewerCounter"></span></div>
+        <div class="viewer-thumbnails" id="viewerThumbnails" aria-label="Choose an image"></div>
+      </section>
+    </div>
+
+    <!-- CALL TO ACTION -->
+    <section class="work-cta"><span class="eyebrow">YOUR OCCASION, YOUR STORY</span><h2>Shall We Make it <br><em>Unforgettable?</em></h2><a class="text-link light-link" href="contact.html" class="btn btn--light">Start A Conversation <span>↗</span></a></section>
+    <!-- FOOTER -->
+    <footer class="site-footer"><a class="footer-brand" href="index.html">EMY <em>MAANY</em></a><span>Thoughtfully made. Beautifully remembered.</span><span>© <span class="year"></span> Emy Maany</span><small>CREATED BY Bemen_GS</small></footer>
+  </main>
+  <script src="work.js"></script>
+</body>
+</html>
