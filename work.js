@@ -36,10 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Portfolio content: each collection is a related group of photographs.
-  // Replace these sample image URLs with Emy Maany' real event photographs.
-  // Images of Mum's work :)
+  // Replace these sample image URLs with Emy Sweets' real event photographs.
   const collections = {
-    // ========== Event Decorations ==========
     decorations: [
       {
         title: "Wedding Receptions",
@@ -53,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
           ["Floral table details", "https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=1800&q=90"]
         ]
       },
-      // ================================================
       {
         title: "Floral & Finishing Touches",
         kicker: "FLOWERS & DETAILS",
@@ -65,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
           ["A beautiful detail", "https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1800&q=90"]
         ]
       },
-      // ===============================================
       {
         title: "Celebration Installations",
         kicker: "STATEMENT MOMENTS",
@@ -78,7 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
         ]
       }
     ],
-    // ========== Cakes & Dessert Tables ==========
     cakes: [
       {
         title: "Wedding Cakes",
@@ -91,7 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
           ["Wedding cake details", "https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&w=1800&q=90"]
         ]
       },
-      // ===============================================
       {
         title: "Birthday Cakes",
         kicker: "A SWEET STATEMENT",
@@ -103,7 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
           ["Sweet finishing details", "https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=1800&q=90"]
         ]
       },
-      // ===============================================
       {
         title: "Dessert Tables",
         kicker: "THE SWEET COLLECTION",
@@ -116,7 +109,6 @@ document.addEventListener("DOMContentLoaded", () => {
         ]
       }
     ],
-    // ========== Catering ==========
     catering: [
       {
         title: "Fine Dining",
@@ -129,7 +121,6 @@ document.addEventListener("DOMContentLoaded", () => {
           ["The dining experience", "https://images.unsplash.com/photo-1515003197210-e0cd7184f8b5?auto=format&fit=crop&w=1800&q=90"]
         ]
       },
-      // ===============================================
       {
         title: "Buffet & Grazing",
         kicker: "ABUNDANCE, BEAUTIFULLY SERVED",
@@ -141,7 +132,6 @@ document.addEventListener("DOMContentLoaded", () => {
           ["A table made for sharing", "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1800&q=90"]
         ]
       },
-      // ===============================================
       {
         title: "Canapés & Small Bites",
         kicker: "THE LITTLE DETAILS",

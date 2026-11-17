@@ -5,6 +5,22 @@
   document.documentElement.lang = 'en';
   document.documentElement.dir = 'ltr';
   document.body.classList.remove('is-arabic');
+
+  // Keep the installed Android PWA in portrait orientation where supported.
+  // Browsers may reject runtime locking in a normal tab; the manifest setting
+  // is the primary orientation preference for the installed app.
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches ||
+    window.matchMedia('(display-mode: fullscreen)').matches ||
+    window.navigator.standalone === true;
+  const lockPortrait = () => {
+    if (isStandalone && screen.orientation && typeof screen.orientation.lock === 'function') {
+      screen.orientation.lock('portrait-primary').catch(() => {
+        // The manifest orientation remains the fallback for supported PWAs.
+      });
+    }
+  };
+  lockPortrait();
+  window.addEventListener('pageshow', lockPortrait);
   try { localStorage.removeItem('emy-maany-language'); } catch (_) {}
 
   // Reading progress and back-to-top controls.

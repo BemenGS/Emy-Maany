@@ -1,13 +1,13 @@
 {
   "id": "/",
-  "name": "Emy Maany \u2014 Cake Maker & Event Planner",
+  "name": "Emy Maany — Cake Maker & Event Planner",
   "short_name": "Emy Maany",
-  "description": "Emy Maany \u2014 considered celebrations, beautiful details, unforgettable moments.",
+  "description": "Emy Maany — considered celebrations, beautiful details, unforgettable moments.",
   "lang": "en",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "orientation": "any",
+  "orientation": "portrait-primary",
   "background_color": "#f7f3ed",
   "theme_color": "#241b18",
   "icons": [
