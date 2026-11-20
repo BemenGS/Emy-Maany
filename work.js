@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Portfolio content: each collection is a related group of photographs.
   // Replace these sample image URLs with Emy Sweets' real event photographs.
+  //Images :)
   const collections = {
     decorations: [
       {
@@ -45,10 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         description: "Elegant reception styling, tablescapes and unforgettable celebration spaces.",
         cover: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1100&q=90",
         images: [
-          ["The reception table", "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1800&q=90"],
-          ["A romantic celebration", "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=90"],
-          ["An intimate setting", "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1800&q=90"],
-          ["Floral table details", "https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=1800&q=90"]
+          [ "Batman cake","Images/Decorations/Wedding.jpeg"],
         ]
       },
       {
@@ -63,52 +61,88 @@ document.addEventListener("DOMContentLoaded", () => {
         ]
       },
       {
-        title: "Celebration Installations",
+        title: "Birth Events & Baby Showers",
         kicker: "STATEMENT MOMENTS",
         description: "Beautiful focal points and bespoke styling for life's most special occasions.",
         cover: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1100&q=90",
         images: [
-          ["The celebration space", "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1800&q=90"],
-          ["Wedding atmosphere", "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1800&q=90"],
-          ["A statement setting", "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1800&q=90"]
+                    [ "Batman cake","Images/Decorations/elephant .jpeg"],
         ]
       }
     ],
+    // ========================================================================
     cakes: [
       {
-        title: "Wedding Cakes",
+        title: "Birthday Cakes : Boys",
         kicker: "MADE FOR YOUR MOMENT",
         description: "Elegant centrepieces created to complement the style of your celebration.",
         cover: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1100&q=90",
         images: [
-          ["Classic celebration cake", "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1800&q=90"],
-          ["An elegant cake design", "https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?auto=format&fit=crop&w=1800&q=90"],
-          ["Wedding cake details", "https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&w=1800&q=90"]
+          [ "Batman cake","Images/Cakes/batman.jpeg"],
+          ["Ben 10 cake", "Images/Cakes/ben10.jpeg"],
+          ["Dogs cake", "Images/Cakes/dogs.jpeg"],
+          ["Cars cake", "Images/Cakes/simple cars.jpeg"],
+          ["Cars cake 2", "Images/Cakes/simple cars 2.jpeg"],
+          ["Animals cake", "Images/Cakes/animals.jpeg"],
+          ["Bear cake", "Images/Cakes/bear cake.jpeg"],
+          ["Bear cake 2", "Images/Cakes/bear cake2.jpeg"],
+          ["Bear cake 2", "Images/Cakes/bear 3.jpeg"],
+          ["Cars", "Images/Cakes/cars.jpeg"],
+          ["Sun cake 2", "Images/Cakes/sun cake.jpeg"],
+          ["Sun cake 2", "Images/Cakes/dinosaurs cake.jpeg"],
+          ["Sun cake 2", "Images/Cakes/football.jpeg"],
+          ["Sun cake 2", "Images/Cakes/baby boss.jpeg"],
         ]
       },
       {
-        title: "Birthday Cakes",
+        title: "Birthday Cakes : Girls",
         kicker: "A SWEET STATEMENT",
         description: "Personalised cakes made to turn a birthday into a moment worth remembering.",
         cover: "https://images.unsplash.com/photo-1558636508-e0db3814bd1d?auto=format&fit=crop&w=1100&q=90",
         images: [
-          ["A birthday centrepiece", "https://images.unsplash.com/photo-1558636508-e0db3814bd1d?auto=format&fit=crop&w=1800&q=90"],
-          ["A celebration cake", "https://images.unsplash.com/photo-1562777717-dc6984f65a63?auto=format&fit=crop&w=1800&q=90"],
-          ["Sweet finishing details", "https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=1800&q=90"]
+          ["A birthday centrepiece", "Images/Cakes/butterfly.jpeg"],
+          ["Sweet finishing details", "Images/Cakes/butterfly2.jpeg"],
+          ["Sweet finishing details", "Images/Cakes/cake.jpeg"],
+          ["Sweet finishing details", "Images/Cakes/pink teddy bear.jpeg"],
+          ["Sweet finishing details", "Images/Cakes/pinky cake.jpeg"],
+          ["Sweet finishing details", "Images/Cakes/birthday cake.jpeg"],
+          ["Sweet finishing details", "Images/Cakes/Elsa.jpeg"],
+          ["Sweet finishing details", "Images/Cakes/Elsa 2.jpeg"],
+          ["Sweet finishing details", "Images/Cakes/girly cake.jpeg"],
+          ["Sweet finishing details", "Images/Cakes/hello ketty.jpeg"],
+          ["Sweet finishing details", "Images/Cakes/Stetch.jpeg"],
+          ["Sweet finishing details", "Images/Cakes/stetch 2.jpeg"],
+          ["Sweet finishing details", "Images/Cakes/Manuela.jpeg"],
+          ["Sun cake 2", "Images/Cakes/mecky mouse.jpeg"],
+          ["Sun cake 2", "Images/Cakes/duck.jpeg"],
+          ["Sun cake 2", "Images/Cakes/Miramar.jpeg"],
+          ["Sun cake 2", "Images/Cakes/moana.jpeg"],
         ]
       },
       {
-        title: "Dessert Tables",
+        title: "Birthday Cakes & Special Events",
         kicker: "THE SWEET COLLECTION",
         description: "A considered selection of desserts, styled beautifully for your guests.",
         cover: "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1100&q=90",
         images: [
-          ["Dessert table selection", "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1800&q=90"],
-          ["Beautiful sweet treats", "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=1800&q=90"],
-          ["A delicate dessert", "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1800&q=90"]
+          ["Dessert table selection", "Images/Cakes/engagement.jpeg"],
+          ["Beautiful sweet treats", "Images/Cakes/laptop.jpeg"],
+          ["A delicate dessert", "Images/Cakes/luxury.jpeg"],
+          ["A delicate dessert", "Images/Cakes/make-up.jpeg"],
+          ["A delicate dessert", "Images/Cakes/Strwaberry cake.jpeg"],
+          ["A delicate dessert", "Images/Cakes/Valentin.jpeg"],
+          ["A delicate dessert", "Images/Cakes/Valentin 2.jpeg"],
+          ["A delicate dessert", "Images/Cakes/Valentin 3.jpeg"],
+          ["A delicate dessert", "Images/Cakes/Valentine 4.jpeg"],
+          ["A delicate dessert", "Images/Cakes/chocolate cake.jpeg"],
+          ["Sweet finishing details", "Images/Cakes/white cake.jpeg"],
+          ["Sweet finishing details", "Images/Cakes/italian cake.jpeg"],
+          ["Sweet finishing details", "Images/Cakes/ice cream cake.jpeg"],
+          ["Sweet finishing details", "Images/Cakes/ebgagement 2.jpeg"],
         ]
       }
     ],
+    // ========================================================================
     catering: [
       {
         title: "Fine Dining",
