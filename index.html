@@ -1,138 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Emy Maany — considered celebrations, beautiful details, unforgettable moments.">
-  <title>Emy Maany | Celebrations, Curated</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="home.css">
-  <meta name="theme-color" content="#241b18">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Emy Maany">
-  <link rel="manifest" href="/manifest.webmanifest">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
-  <link rel="apple-touch-icon" href="/icon-192.png">
-  <link rel="stylesheet" href="/pwa-install.css">
-</head>
-<body>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Emy Maany &mdash; considered celebrations, beautiful details, unforgettable moments." name="description"/>
+  <title>
+   Emy Maany | Celebrations, Curated
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=DM+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+  <link href="home.css" rel="stylesheet"/>
+  <link href="showcase.css" rel="stylesheet"/>
+  <meta content="#241b18" name="theme-color"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+  <meta content="Emy Maany" name="apple-mobile-web-app-title"/>
+  <link href="/manifest.webmanifest" rel="manifest"/>
+  <link href="/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="/icon-192.png" rel="icon" sizes="192x192" type="image/png"/>
+  <link href="/icon-192.png" rel="apple-touch-icon"/>
+  <link href="/pwa-install.css" rel="stylesheet"/>
+ </head>
+ <body>
+    <!-- =====================================================
+         HOME PAGE: Header / Hero Slider / Introduction / Services / Footer
+         ===================================================== -->
   <!-- PRELOADER -->
-  <div class="preloader" aria-hidden="true">
-    <span class="preloader-mark">Emy Maany</span>
-    <span class="preloader-line"></span>
+  <div aria-hidden="true" class="preloader">
+   <span class="preloader-mark">
+    Emy Maany
+   </span>
+   <span class="preloader-line">
+   </span>
   </div>
-
   <!-- NAVIGATION -->
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Emy Maany home">
-      <span class="brand-monogram">E</span>
-      <span class="brand-name">EMY <i>MAANY</i></span>
+   <a aria-label="Emy Maany home" class="brand" href="index.html">
+    <span class="brand-monogram">
+     E
+    </span>
+    <span class="brand-name">
+     EMY
+     <i>
+      MAANY
+     </i>
+    </span>
+   </a>
+   <button aria-expanded="false" aria-label="Open navigation" class="menu-toggle">
+    <span>
+    </span>
+    <span>
+    </span>
+   </button>
+   <nav aria-label="Main navigation" class="main-nav">
+    <a class="active" href="index.html">
+     <b>Home</b>
     </a>
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
-    <span></span>
-    <span></span>
-</button>
-    <nav class="main-nav" aria-label="Main navigation">
-      <a class="active" href="index.html">Home</a>
-      <a href="work.html">Our Work</a>
-      <a href="contact.html">Connect</a>
-      <a class="nav-cta" href="contact.html">Plan Your Event <span>↗</span></a>
-    </nav>
+    <a href="work.html">
+     Our Work
+    </a>
+    <a href="contact.html">
+     <b>Contact</b>
+    </a>
+    <a class="nav-cta" href="contact.html">
+     Plan Your Event
+     <span>
+      &nearrow;
+     </span>
+    </a>
+   </nav>
   </header>
-
   <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-image" role="img" aria-label="Elegant candlelit celebration table with floral styling"></div>
-      <div class="hero-shade"></div>
-      <div class="hero-content reveal">
-        <p class="eyebrow"><span></span> THE ART OF CELEBRATION</p>
-        <h1>Moments made<br><em>Magnificent.</em></h1>
-        <p class="hero-copy">From The First Beautiful Detail To The Final Sweet Bite, We Bring Every Part Of Your Celebration Together.</p>
-        <a class="text-link light-link" href="work.html">Discover Our World <span>↗</span></a>
-      </div>
-      <!-- <div class="hero-index"><span>01</span><i></i> CELEBRATIONS, CURATED</div> -->
-      <div class="scroll-cue"><b>SCROLL TO EXPLORE <span>↓</span></b></div>
-    </section>
-
-    <!-- INTRODUCTION -->
-    <section class="intro section-pad">
-      <div class="intro-kicker reveal">
-        <span class="eyebrow">A COMPLETE CELEBRATION HOUSE</span>
-        <span class="fine-line"></span>
-      </div>
-      <div class="intro-grid">
-        <h2 class="reveal">The Beauty is<br>in <em>Every Detail.</em></h2>
-        <div class="intro-text reveal">
-          <p class="lead">At Emy Maany, we believe the most Memorable Occasions are the ones where everything Feels Effortlessly Considered.</p>
-          <p>We bring Event Styling, Bespoke Cakes and Thoughtful Catering under one Creative Roof — shaping a Seamless Experience that Feels Personal, polished and Entirely Yours.</p>
-          <a class="text-link dark-link" href="contact.html"><b>Contact <span>↗</span></b></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE COUNTERS -->
-    <section class="experience-counters section-pad" aria-label="Emy Maany experience">
-      <div class="counter-card"><strong data-count="11" data-suffix="+">0</strong><span>Years of Cake & Sweets Experience</span></div>
-      <div class="counter-card"><strong data-count="1.5" data-decimals="1" data-suffix="+">0</strong><span>Years of Event Decorations Experience</span></div>
-      <div class="counter-card"><strong data-count="1000" data-suffix="+">0</strong><span>Happy Customers</span></div>
-    </section>
-
-    <!-- SERVICES -->
-    <section class="services section-pad">
-      <div class="section-heading reveal">
-        <div>
-          <span class="eyebrow">WHAT WE DO</span>
-          <h2>One vision. <em>Every detail.</em></h2>
-        </div>
-        <p>All the Elements of an Extraordinary Event, Thoughtfully Brought Together.</p>
-      </div>
-      <div class="service-grid">
-        <a class="service-card reveal" href="work.html#decorations">
-          <div class="service-photo photo-decor"></div>
-          <div class="service-meta"><span>01 / THE SETTING</span><span>↗</span></div>
-          <h3>Event décor</h3>
-          <p>Atmosphere, Styling and Beautiful spaces that set the scene.</p>
+   <!-- PRODUCT HERO SLIDER -->
+   <section aria-label="Featured creations" class="showcase" id="showcase">
+    <div class="showcase-stage">
+     <div aria-hidden="true" class="showcase-orbit">
+     </div>
+     <div aria-live="polite" class="showcase-slides">
+      <article class="showcase-slide is-active" data-slide="0" style="--slide-accent:#c59b66;--slide-bg:#191411">
+       <div class="showcase-copy">
+        <span class="showcase-kicker">
+         THE CENTREPIECE
+        </span>
+        <h1>
+         Wedding
+         <br/>
+         <em>
+          Cakes.
+         </em>
+        </h1>
+        <p>
+         Elegant details, delicate florals and a centrepiece made to be remembered.
+        </p>
+        <!-- Wedding -->
+        <a class="showcase-cta" href="work.html#cakes">
+         DISCOVER MORE
+         <b>
+          &nearrow;
+         </b>
         </a>
-        <a class="service-card reveal" href="work.html#cakes">
-          <div class="service-photo photo-cake"></div>
-          <div class="service-meta"><span>02 / THE CENTREPIECE</span><span>↗</span></div>
-          <h3>Bespoke cakes</h3>
-          <p>Distinctive creations made to be Admired, Shared and Remembered.</p>
+       </div>
+       <div aria-hidden="true" class="showcase-word">
+        Wedding
+       </div>
+       <div class="showcase-product">
+        <img alt="Italian celebration cake" src="Images/slider/italian%20cake/italian%20cake%203D.png"/>
+       </div>
+       <div aria-hidden="true" class="showcase-floats">
+        <img alt="" class="float f1" src="Images/slider/italian%20cake/Vibrant%20Red%20Rose%20Cutout.png"/>
+        <img alt="" class="float f2" src="Images/slider/italian%20cake/Triad%20of%20Reflective%20Gold%20Spheres.png"/>
+        <img alt="" class="float f3" src="Images/slider/italian%20cake/Glossy%20Pearl%20Sphere%20Cluster.png"/>
+        <img alt="" class="float f4" src="Images/slider/italian%20cake/Vibrant%20Red%20Rose%20Cutout.png"/>
+        
+       </div>
+       <span class="showcase-caption">
+        MADE UNIQUELY YOURS
+       </span>
+      </article>
+      <article class="showcase-slide" data-slide="1" style="--slide-accent:#d4a96f;--slide-bg:#191411">
+       <div class="showcase-copy">
+        <span class="showcase-kicker">
+         LITTLE MOMENTS, BIG MAGIC
+        </span>
+        <h1>
+         Birthday
+         <br/>
+         <em>
+          Boy.
+         </em>
+        </h1>
+        <p>
+         Playful characters, joyful colours and a cake made just for him.
+        </p>
+        <!-- Birthday Boy -->
+        <a class="showcase-cta" href="work.html#cakes">
+         DISCOVER MORE
+         <b>
+          &nearrow;
+         </b>
         </a>
-        <a class="service-card reveal" href="work.html#catering">
-          <div class="service-photo photo-catering"></div>
-          <div class="service-meta"><span>03 / THE TABLE</span><span>↗</span></div>
-          <h3>Fine catering</h3>
-          <p>Delicious Details and Inviting Tables For Every Kind Of Gathering.</p>
+       </div>
+       <div aria-hidden="true" class="showcase-word">
+        Birthday
+       </div>
+       <div class="showcase-product">
+        <img alt="Animal themed birthday cake" src="Images/slider/animals/animals%20.png"/>
+       </div>
+       <div aria-hidden="true" class="showcase-floats">
+        <img alt="" class="float f1" src="Images/slider/animals/أسد كرتوني لطيف ثلاثي الأبعاد.png"/>
+        <img alt="" class="float f2" src="Images/slider/animals/زرافة%20كرتونية%20لطيفة%20ثلاثية%20الأبعاد.png"/>
+        <img alt="" class="float f3" src="Images/slider/animals/فيل%20صغير%20لطيف%20ثلاثي%20الأبعاد.png"/>
+        <img alt="" class="float f4" src="Images/slider/animals/قرد%20كرتوني%20ثلاثي%20الأبعاد%20لطيف.png"/>
+       </div>
+       <!--      -->
+       <span class="showcase-caption">
+        A WORLD OF WONDER
+       </span>
+      </article>
+      <article class="showcase-slide" data-slide="2" style="--slide-accent:#d5a1b9;--slide-bg:#191411">
+       <div class="showcase-copy">
+        <span class="showcase-kicker">
+         YOUR DAY, YOUR FAIRYTALE
+        </span>
+        <h1>
+         Birthday
+         <br/>
+         <em>
+          Girl.
+         </em>
+        </h1>
+        <p>
+         Sweet colours, lovely characters and a cake made just for her.
+        </p>
+        <!-- Birthday Girl -->
+        <a class="showcase-cta" href="work.html#cakes">
+         DISCOVER MORE
+         <b>
+          &nearrow;
+         </b>
         </a>
+       </div>
+       <div aria-hidden="true" class="showcase-word">
+        Birthday
+       </div>
+       <div class="showcase-product">
+        <img alt="Pink teddy bear birthday cake" src="Images/slider/pink%20bear/كعكة جونو نيستا الوردية بالدب البنفسجي.png"/>
+       </div>
+       <div aria-hidden="true" class="showcase-floats">
+        <img alt="" class="float f1" src="Images/slider/pink%20bear/دب%20وردي%20لامع%20مع%20زهرة%20بيضاء.png"/>
+        <img alt="" class="float f2" src="Images/slider/pink%20bear/بالونات%20لامعة%20ملونة%20متجمعة.png"/>
+        <img alt="" class="float f3" src="Images/slider/pink%20bear/سحابة%20ثلاثية%20الأبعاد%20لامعة.png"/>
+        <img alt="" class="float f4" src="Images/slider/italian%20cake/Triad%20of%20Reflective%20Gold%20Spheres.png"/>
+       </div>
+       <span class="showcase-caption">
+        SWEET DETAILS, FOREVER
+       </span>
+      </article>
+      <article class="showcase-slide" data-slide="3" style="--slide-accent:#c5a16d;--slide-bg:#191411">
+       <div class="showcase-copy">
+        <span class="showcase-kicker">
+         THE TABLE, THOUGHTFULLY SET
+        </span>
+        <h1>
+         Fine
+         <br/>
+         <em>
+          Catering.
+         </em>
+        </h1>
+        <p>
+         Delicious details and inviting bites, prepared for sharing.
+        </p>
+        <!-- Fine Catering -->
+        <a class="showcase-cta" href="work.html#catering">
+         DISCOVER MORE
+         <b>
+          &nearrow;
+         </b>
+        </a>
+       </div>
+       <div aria-hidden="true" class="showcase-word">
+        Catering
+       </div>
+       <div class="showcase-product">
+        <img alt="Crispy chicken sandwich" src="Images/slider/chicken%20snadwich/chicken-sandwich-cutout.png"/>
+       </div>
+       <div aria-hidden="true" class="showcase-floats">
+        <img alt="" class="float f1" src="Images/slider/chicken%20snadwich/فيليه%20دجاج%20مقرمش%20معزول.png"/>
+        <img alt="" class="float f2" src="Images/slider/chicken%20snadwich/أوراق%20خس%20طازجة%20على%20خلفية%20شفافة.png"/>
+        <img alt="" class="float f3" src="Images/slider/chicken%20snadwich/أوراق%20خس%20طازجة%20على%20خلفية%20شفافة.png"/>
+        <img alt="" class="float f4" src="Images/slider/chicken%20snadwich/فيليه%20دجاج%20مقرمش%20معزول.png"/>
+       </div>
+       <span class="showcase-caption">
+        PREPARED TO BE SHARED
+       </span>
+      </article>
+      <article class="showcase-slide" data-slide="4" style="--slide-accent:#c9a76d;--slide-bg:#191411">
+       <div class="showcase-copy">
+        <span class="showcase-kicker">
+         THE SETTING FOR YOUR STORY
+        </span>
+        <h1>
+         Event
+         <br/>
+         <em>
+          Decor.
+         </em>
+        </h1>
+        <p>
+         Atmosphere, thoughtful styling and beautiful details in every corner.
+        </p>
+         <!-- Event Decor -->
+        <a class="showcase-cta" href="work.html#decorations">
+         DISCOVER MORE
+         <b>
+          &nearrow;
+         </b>
+        </a>
+       </div>
+       <div aria-hidden="true" class="showcase-word">
+        Celebration
+       </div>
+       <div class="showcase-product showcase-photo">
+        <img alt="Teddy bear themed event decoration" src="Images/slider/bear/bear%20.png"/>
+       </div>
+       <div aria-hidden="true" class="showcase-floats">
+        <img alt="" class="float f1" src="Images/slider/bear/Glossy Orange Balloon Bouquet with Ribbons.png"/>
+        <img alt="" class="float f2" src="Images/slider/bear/Glossy%20Gold%20Balloon%20Trio.png"/>
+        <img alt="" class="float f3" src="Images/slider/bear/Glossy%20Blue%20and%20White%20Hot%20Air%20Balloon.png"/>
+        <img alt="" class="float f4" src="Images/slider/bear/Plush Teddy Bear with Blue Bow.png"/>
+        <img alt="" class="float f5" src="Images/slider/bear/Glossy White Balloon Trio.png"/>
+       </div>
+       <span class="showcase-caption">
+        EVERY DETAIL IN ITS PLACE
+       </span>
+      </article>
+     </div>
+     <!-- ================================================ -->
+     <div class="showcase-footer">
+      <div class="showcase-count">
+       <span id="showcase-current">
+        01
+       </span>
+       <i>
+       </i>
+       <span>
+        05
+       </span>
       </div>
-    </section>
-
-    <!-- BRAND STATEMENT -->
-    <section class="statement">
-      <div class="statement-inner reveal">
-        <span class="eyebrow"><b>THE EMY MAANY PROMISE</b></span>
-        <h2>Not simply An Event.<br><em>A Feeling That Stays.</em></h2>
-        <a class="text-link light-link" href="work.html"><B>Let's take a look at Our Work</B> <span>↗</span></a>
+      <nav aria-label="Choose a featured category" class="showcase-tabs">
+       <button class="active" data-go="0">
+        WEDDING
+       </button>
+       <button data-go="1">
+        BIRTHDAY BOY
+       </button>
+       <button data-go="2">
+        BIRTHDAY GIRL
+       </button>
+       <button data-go="3">
+        CATERING
+       </button>
+       <button data-go="4">
+        DECOR
+       </button>
+      </nav>
+      <div class="showcase-arrows">
+       <button aria-label="Previous slide" id="showcase-prev">
+        &larr;
+       </button>
+       <button aria-label="Next slide" id="showcase-next">
+        &rarr;
+       </button>
       </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      <a class="footer-brand" href="index.html">EMY <em>MAANY</em></a>
-      <span>Thoughtfully Made. Beautifully Remembered.</span>
-      <span>© <span class="year"></span> Emy Maany</span>
-      <small>CREATED BY Bemen_GS</small>
-    </footer>
+      <span class="showcase-signature">
+       CAKES &middot; CATERING &middot; EVENT STYLING
+      </span>
+     </div>
+    </div>
+   </section>
+   <!-- INTRODUCTION -->
+   <section class="intro section-pad">
+    <div class="intro-kicker reveal">
+     <span class="eyebrow">
+      A COMPLETE CELEBRATION HOUSE
+     </span>
+     <span class="fine-line">
+     </span>
+    </div>
+    <div class="intro-grid">
+     <h2 class="reveal">
+      The Beauty is
+      <br/>
+      in
+      <em>
+       Every Detail.
+      </em>
+     </h2>
+     <div class="intro-text-reveal">
+      <p class="lead1">
+       At Emy Maany, we believe the most Memorable Occasions are the ones where everything Feels Effortlessly Considered.
+      </p>
+      <p class="lead2">
+       We bring Event Styling, Bespoke Cakes and Thoughtful Catering under one Creative Roof &mdash; shaping a Seamless Experience that Feels Personal, polished and Entirely Yours.
+      </p>
+      <a class="text-link dark-link" href="contact.html">
+       <b>
+        Contact
+        <span>
+         &nearrow;
+        </span>
+       </b>
+      </a>
+     </div>
+    </div>
+   </section>
+   <!-- EXPERIENCE COUNTERS -->
+   <section aria-label="Emy Maany experience" class="experience-counters section-pad">
+    <div class="counter-card">
+     <strong data-count="11" data-suffix="+">
+      0
+     </strong>
+     <span>
+      Years of Cake &amp; Sweets Experience
+     </span>
+    </div>
+    <div class="counter-card">
+     <strong data-count="1.5" data-decimals="1" data-suffix="+">
+      0
+     </strong>
+     <span>
+      Years of Event Decorations Experience
+     </span>
+    </div>
+    <div class="counter-card">
+     <strong data-count="1000" data-suffix="+">
+      0
+     </strong>
+     <span>
+      Happy Customers
+     </span>
+    </div>
+   </section>
+   <!-- SERVICES -->
+   <section class="services section-pad">
+    <div class="section-heading reveal">
+     <div>
+      <span class="eyebrow">
+       WHAT WE DO
+      </span>
+      <h2>
+       One vision.
+       <em>
+        Every detail.
+       </em>
+      </h2>
+     </div>
+     <p>
+      All the Elements of an Extraordinary Event, Thoughtfully Brought Together.
+     </p>
+    </div>
+    <div class="service-grid">
+     <a class="service-card reveal" href="work.html#decorations">
+      <div class="service-photo photo-decor">
+      </div>
+      <div class="service-meta">
+       <span>
+        01 / THE SETTING
+       </span>
+       <span>
+        &nearrow;
+       </span>
+      </div>
+      <h3>
+       Event d&eacute;cor
+      </h3>
+      <p>
+       Atmosphere, Styling and Beautiful spaces that set the scene.
+      </p>
+     </a>
+     <a class="service-card reveal" href="work.html#cakes">
+      <div class="service-photo photo-cake">
+      </div>
+      <div class="service-meta">
+       <span>
+        02 / THE CENTREPIECE
+       </span>
+       <span>
+        &nearrow;
+       </span>
+      </div>
+      <h3>
+       Bespoke cakes
+      </h3>
+      <p>
+       Distinctive creations made to be Admired, Shared and Remembered.
+      </p>
+     </a>
+     <a class="service-card reveal" href="work.html#catering">
+      <div class="service-photo photo-catering">
+      </div>
+      <div class="service-meta">
+       <span>
+        03 / THE TABLE
+       </span>
+       <span>
+        &nearrow;
+       </span>
+      </div>
+      <h3>
+       Fine catering
+      </h3>
+      <p>
+       Delicious Details and Inviting Tables For Every Kind Of Gathering.
+      </p>
+     </a>
+    </div>
+   </section>
+   <!-- BRAND STATEMENT -->
+   <section class="statement">
+    <div class="statement-inner reveal">
+     <span class="eyebrow">
+      <b>
+       THE EMY MAANY PROMISE
+      </b>
+     </span>
+     <h2>
+      Not simply An Event.
+      <br/>
+      <em>
+       A Feeling That Stays.
+      </em>
+     </h2>
+     <a class="text-link light-link" href="work.html">
+      <b>
+       Let's take a look at Our Work
+      </b>
+      <span>
+       &nearrow;
+      </span>
+     </a>
+    </div>
+   </section>
+   <!-- FOOTER -->
+   <footer class="site-footer">
+    <a class="footer-brand" href="index.html">
+     EMY
+     <em>
+      MAANY
+     </em>
+    </a>
+    <span>
+     Thoughtfully Made. Beautifully Remembered.
+    </span>
+    <span>
+     &copy;
+     <span class="year">
+     </span>
+     Emy Maany
+    </span>
+    <small>
+     CREATED BY Bemen_GS
+    </small>
+   </footer>
   </main>
-  <script src="home.js"></script>
-  <script src="site-enhancements.js" defer></script>
-  <script src="/pwa-install.js" defer></script>
-</body>
+  <script src="home.js">
+  </script>
+  <script defer="" src="showcase.js">
+  </script>
+  <script defer="" src="site-enhancements.js">
+  </script>
+  <script defer="" src="/pwa-install.js">
+  </script>
+ </body>
 </html>

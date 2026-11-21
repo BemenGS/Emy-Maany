@@ -1,0 +1,1016 @@
+/* Emy Maany — editorial floating-product hero */
+.showcase {
+    height:100svh;
+    min-height:680px;
+    max-height:1000px;
+    position:relative;
+    overflow:hidden;
+    background:#191411;
+    color:#eee4d4;
+    padding-top:92px
+}
+.showcase-stage {
+    height:100%;
+    position:relative;
+    overflow:hidden;
+    background:radial-gradient(ellipse at 69% 48%,rgba(117,82,48,.12),transparent 36%),#191411
+}
+.showcase-orbit {
+    position:absolute;
+    width:min(43vw,620px);
+    aspect-ratio:1;
+    border:1px solid rgba(190,151,99,.09);
+    border-radius:50%;
+    left:66%;
+    top:48%;
+    transform:translate(-50%,-50%);
+    pointer-events:none
+}
+.showcase-orbit:before,.showcase-orbit:after {
+    content:"";
+    position:absolute;
+    inset:8%;
+    border:1px solid rgba(190,151,99,.06);
+    border-radius:50%
+}
+.showcase-orbit:after {
+    inset:17%
+}
+.showcase-slides {
+    position:absolute;
+    inset:0
+}
+.showcase-slide {
+    position:absolute;
+    inset:0;
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transition:opacity .65s ease,visibility .65s;
+    --slide-accent:#c5a16d
+}
+.showcase-slide.is-active {
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+    z-index:2
+}
+.showcase-copy {
+    position:absolute;
+    z-index:5;
+    left:10%;
+    top:50%;
+    transform:translateY(-48%);
+    width:min(31%,440px)
+}
+.showcase-kicker {
+    display:block;
+    color:#a99a86;
+    font:600 9px/1.5 "DM Sans",sans-serif;
+    letter-spacing:.25em;
+    text-transform:uppercase;
+    margin-bottom:28px
+}
+.showcase-kicker:before {
+    content:"";
+    display:inline-block;
+    width:27px;
+    height:1px;
+    background:var(--slide-accent);
+    vertical-align:middle;
+    margin:0 12px 3px 0
+}
+.showcase-copy h1 {
+    font:400 clamp(60px,5.3vw,94px)/.82 "Cormorant Garamond",Georgia,serif;
+    letter-spacing:-.045em;
+    margin:0 0 24px;
+    color:#e7ddcf
+}
+.showcase-copy h1 em {
+    font-style:italic;
+    color:var(--slide-accent)
+}
+.showcase-copy p {
+    font:400 12px/1.9 "DM Sans",sans-serif;
+    color:#9e9388;
+    max-width:310px;
+    margin:0 0 28px
+}
+.showcase-cta {
+    height:44px;
+    min-width:160px;
+    padding:0 17px;
+    border:1px solid rgba(188,147,91,.28);
+    border-radius:30px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:26px;
+    font:600 9px "DM Sans",sans-serif;
+    letter-spacing:.13em;
+    color:#d9c9b2;
+    transition:background .25s,border-color .25s
+}
+.showcase-cta:hover {
+    background:rgba(188,147,91,.12);
+    border-color:var(--slide-accent)
+}
+.showcase-cta b {
+    font-size:16px;
+    color:var(--slide-accent)
+}
+.showcase-word {
+    position:absolute;
+    z-index:0;
+    left:51%;
+    top:48%;
+    transform:translate(-50%,-50%);
+    white-space:nowrap;
+    font:500 clamp(130px,15vw,250px)/.8 "Cormorant Garamond",serif;
+    letter-spacing:-.06em;
+    color:rgba(221,204,179,.035);
+    pointer-events:none
+}
+.showcase-product {
+    position:absolute;
+    z-index:2;
+    left:67%;
+    top:47%;
+    width:min(32vw,490px);
+    height:min(57vh,570px);
+    transform:translate(-50%,-50%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    pointer-events:none
+}
+.showcase-product img {
+    display:block;
+    max-width:100%;
+    max-height:100%;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+    filter:drop-shadow(0 28px 25px rgba(0,0,0,.28));
+}
+.showcase-product.showcase-photo {
+    width:min(31vw,470px);
+    height:min(54vh,520px)
+}
+.showcase-product.showcase-photo img {
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    filter:drop-shadow(0 24px 30px rgba(0,0,0,.35))
+}
+.showcase-floats {
+    position:absolute;
+    inset:0;
+    z-index:3;
+    pointer-events:none
+}
+.showcase-floats .float {
+    position:absolute;
+    display:block;
+    width:clamp(68px,8vw,128px);
+    height:clamp(68px,8vw,128px);
+    object-fit:contain;
+    filter:drop-shadow(0 12px 13px rgba(0,0,0,.23));
+    animation:floatAround 5.8s ease-in-out infinite alternate;
+}
+/* Elements are deliberately kept outside the hero product's footprint. */
+.showcase-floats .f1 {
+    left:43%;
+    top:19%;
+    width:clamp(70px,7vw,112px);
+    animation-delay:-1.1s
+}
+.showcase-floats .f2 {
+    left:84%;
+    top:22%;
+    width:clamp(78px,8vw,126px);
+    animation-delay:-3.2s
+}
+.showcase-floats .f3 {
+    left:44%;
+    top:68%;
+    width:clamp(68px,7vw,110px);
+    animation-delay:-2s
+}
+.showcase-floats .f4 {
+    left:86%;
+    top:68%;
+    width:clamp(78px,8vw,126px);
+    animation-delay:-4s
+}
+.showcase-floats .f5 {
+    left:54%;
+    top:13%;
+    width:80px;
+    animation-delay:-2.7s
+}
+.showcase-slide[data-slide="1"] .f1 {
+    left:43%;
+    top:19%
+}
+.showcase-slide[data-slide="1"] .f2 {
+    left:85%;
+    top:18%
+}
+.showcase-slide[data-slide="1"] .f3 {
+    left:44%;
+    top:69%
+}
+.showcase-slide[data-slide="1"] .f4 {
+    left:86%;
+    top:68%
+}
+.showcase-slide[data-slide="2"] .f1 {
+    left:42%;
+    top:20%
+}
+.showcase-slide[data-slide="2"] .f2 {
+    left:86%;
+    top:19%;
+    width:clamp(85px,9vw,140px)
+}
+.showcase-slide[data-slide="2"] .f3 {
+    left:43%;
+    top:69%
+}
+.showcase-slide[data-slide="2"] .f4 {
+    left:86%;
+    top:68%
+}
+.showcase-slide[data-slide="3"] .f1 {
+    left:42%;
+    top:18%;
+    width:clamp(70px,7vw,112px)
+}
+.showcase-slide[data-slide="3"] .f2 {
+    left:85%;
+    top:20%
+}
+.showcase-slide[data-slide="3"] .f3 {
+    left:43%;
+    top:69%
+}
+.showcase-slide[data-slide="3"] .f4 {
+    left:86%;
+    top:67%
+}
+.showcase-slide[data-slide="4"] .showcase-product {
+    left:68%;
+    width:min(31vw,450px);
+    height:min(56vh,540px)
+}
+.showcase-slide[data-slide="4"] .f1 {
+    left:42%;
+    top:20%
+}
+.showcase-slide[data-slide="4"] .f2 {
+    left:85%;
+    top:20%
+}
+.showcase-slide[data-slide="4"] .f3 {
+    left:43%;
+    top:69%
+}
+.showcase-slide[data-slide="4"] .f4 {
+    left:86%;
+    top:68%
+}
+@keyframes floatAround {
+    from {
+        transform:translate3d(0,-7px,0) rotate(-5deg)
+    }
+    to {
+        transform:translate3d(0,9px,0) rotate(5deg)
+    }
+}
+.showcase-caption {
+    position:absolute;
+    z-index:4;
+    left:67%;
+    top:83%;
+    transform:translateX(-50%);
+    font:500 7px "DM Sans",sans-serif;
+    letter-spacing:.24em;
+    color:#776b5d;
+    white-space:nowrap
+}
+.showcase-footer {
+    position:absolute;
+    z-index:8;
+    left:6.5%;
+    right:6.5%;
+    bottom:28px;
+    height:42px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between
+}
+.showcase-count {
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font:500 9px "DM Sans",sans-serif;
+    letter-spacing:.18em;
+    color:#928575
+}
+.showcase-count i {
+    width:28px;
+    height:1px;
+    background:var(--gold)
+}
+.showcase-tabs {
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    align-items:center;
+    gap:clamp(18px,3vw,48px);
+    white-space:nowrap
+}
+.showcase-tabs button,.showcase-arrows button {
+    background:none;
+    border:0;
+    color:#a89a88;
+    cursor:pointer;
+    border-radius:50%;
+    border-color:white;
+    padding-bottom:5px;
+    padding-left:5px;
+    padding-right:5px;
+}
+.showcase-tabs button {
+    position:relative;
+    padding:12px 0;
+    font:600 8px "DM Sans",sans-serif;
+    letter-spacing:.16em;
+    transition:color .25s
+}
+.showcase-tabs button:after {
+    content:"";
+    position:absolute;
+    left:0;
+    right:100%;
+    bottom:0;
+    height:1px;
+    background:var(--gold);
+    transition:right .35s
+}
+.showcase-tabs button.active {
+    color:#e5d5bd
+}
+.showcase-tabs button.active:after {
+    right:0
+}
+.showcase-arrows {
+    display:flex;
+    gap:8px;
+    margin-left:auto;
+    margin-right:17%
+}
+.showcase-arrows button {
+    width:38px;
+    height:38px;
+    border:1px solid rgba(188,147,91,.22);
+    border-radius:50%;
+    font-size:20px;
+    line-height:1;
+    color:#d5c4ad;
+    transition:background .2s,border-color .2s
+}
+.showcase-arrows button:hover {
+    background:rgba(188,147,91,.1);
+    border-color:var(--gold)
+}
+.showcase-signature {
+    font:500 7px "DM Sans",sans-serif;
+    letter-spacing:.2em;
+    color:#766a5c
+}
+@media(max-width:900px) {
+    .showcase {
+        padding-top:82px;
+        min-height:720px
+    }
+    .showcase-copy {
+        left:7%;
+        width:34%
+    }
+    .showcase-copy h1 {
+        font-size:clamp(54px,8vw,78px)
+    }
+    .showcase-product {
+        left:69%;
+        width:39vw;
+        height:48vh
+    }
+    .showcase-orbit {
+        left:69%;
+        width:54vw
+    }
+    .showcase-footer {
+        left:4%;
+        right:4%;
+        bottom:20px
+    }
+    .showcase-tabs {
+        gap:16px
+    }
+    .showcase-tabs button {
+        font-size:7px
+    }
+    .showcase-arrows {
+        margin-right:0
+    }
+    .showcase-signature {
+        display:none
+    }
+    .showcase-floats .f1 {
+        left:41%
+    }
+    .showcase-floats .f3 {
+        left:42%
+    }
+}
+@media(max-width:620px) {
+    .showcase {
+        height:calc(100svh - 68px);
+        min-height:720px;
+        padding-top:0
+    }
+    .showcase-stage {
+        height:100%
+    }
+    .showcase-copy {
+        left:7%;
+        top:13%;
+        transform:none;
+        width:86%;
+        text-align:center
+    }
+    .showcase-kicker {
+        font-size:8px;
+        margin-bottom:12px
+    }
+    .showcase-kicker:before {
+        display:none
+    }
+    .showcase-copy h1 {
+        font-size:clamp(48px,12vw,68px);
+        line-height:.78;
+        margin-bottom:12px
+    }
+    .showcase-copy p {
+        font-size:10px;
+        line-height:1.55;
+        margin:0 auto 12px;
+        max-width:280px
+    }
+    .showcase-cta {
+        height:34px;
+        min-width:138px;
+        font-size:8px
+    }
+    .showcase-product {
+        left:50%;
+        top:55%;
+        width:min(72vw,390px);
+        height:39vh
+    }
+    .showcase-product.showcase-photo {
+        width:min(70vw,360px);
+        height:37vh
+    }
+    .showcase-word {
+        left:50%;
+        top:52%;
+        font-size:clamp(100px,23vw,160px)
+    }
+    .showcase-orbit {
+        left:50%;
+        top:56%;
+        width:82vw
+    }
+    .showcase-floats .float {
+        width:clamp(54px,15vw,86px);
+        height:clamp(54px,15vw,86px)
+    }
+    .showcase-floats .f1 {
+        left:4%;
+        top:40%
+    }
+    .showcase-floats .f2 {
+        left:auto;
+        right:4%;
+        top:38%
+    }
+    .showcase-floats .f3 {
+        left:5%;
+        top:69%
+    }
+    .showcase-floats .f4 {
+        left:auto;
+        right:4%;
+        top:70%
+    }
+    .showcase-floats .f5 {
+        display:none
+    }
+    .showcase-caption {
+        left:50%;
+        top:80%;
+        font-size:6px
+    }
+    .showcase-footer {
+        bottom:8px;
+        height:auto;
+        display:grid;
+        grid-template-columns:1fr auto;
+        row-gap:8px
+    }
+    .showcase-count {
+        grid-column:1;
+        grid-row:1
+    }
+    .showcase-arrows {
+        grid-column:2;
+        grid-row:1
+    }
+    .showcase-arrows button {
+        width:32px;
+        height:32px
+    }
+    .showcase-tabs {
+        position:static;
+        grid-column:1/-1;
+        grid-row:2;
+        transform:none;
+        justify-content:center;
+        gap:clamp(9px,3vw,18px);
+        width:100%;
+        overflow:visible
+    }
+    .showcase-tabs button {
+        font-size:6.5px;
+        letter-spacing:.08em;
+        padding:8px 0
+    }
+    .showcase-signature {
+        display:none
+    }
+}
+@media(prefers-reduced-motion:reduce) {
+    .showcase-floats .float {
+        animation:none
+    }
+    .showcase-slide {
+        transition:none
+    }
+    .showcase-tabs button:after {
+        transition:none
+    }
+}
+/* ===== Requested showcase refinements ===== */
+/* Keep the complete pink cake, including its lower edge and base, in view. */
+.showcase-slide[data-slide="2"] .showcase-product {
+    left:67%;
+    top:46%;
+    width:min(38vw,560px);
+    height:min(68vh,650px);
+}
+.showcase-slide[data-slide="2"] .showcase-product img {
+    max-width:100%;
+    max-height:100%;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+}
+/* The animal slide no longer includes the lion image with a white backdrop. */
+/* Give the teddy-bear decor its own balanced hero footprint. */
+.showcase-slide[data-slide="4"] .showcase-product {
+    left:68%;
+    top:47%;
+    width:min(34vw,510px);
+    height:min(58vh,560px);
+}
+.showcase-slide[data-slide="4"] .showcase-product img {
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+/* Footer columns reserve a dedicated area for arrows, away from category labels. */
+.showcase-footer {
+    display:grid;
+    grid-template-columns:minmax(80px,1fr) auto auto minmax(130px,1fr);
+    column-gap:clamp(18px,2.4vw,38px);
+    align-items:center;
+}
+.showcase-count {
+    grid-column:1;
+    justify-self:start
+}
+.showcase-tabs {
+    position:static;
+    left:auto;
+    transform:none;
+    grid-column:2;
+    justify-self:center;
+    gap:clamp(18px,2.7vw,42px);
+}
+.showcase-arrows {
+    grid-column:3;
+    justify-self:center;
+    margin:0;
+}
+.showcase-signature {
+    grid-column:4;
+    justify-self:end;
+    white-space:nowrap
+}
+@media(max-width:900px) and (min-width:621px) {
+    .showcase-footer {
+        grid-template-columns:70px auto auto
+    }
+    .showcase-tabs {
+        gap:14px
+    }
+    .showcase-arrows {
+        justify-self:end
+    }
+}
+@media(max-width:620px) {
+    .showcase-footer {
+        display:grid;
+        grid-template-columns:1fr auto;
+        column-gap:12px
+    }
+    .showcase-count {
+        grid-column:1;
+        grid-row:1
+    }
+    .showcase-arrows {
+        grid-column:2;
+        grid-row:1;
+        justify-self:end
+    }
+    .showcase-tabs {
+        grid-column:1/-1;
+        grid-row:2;
+        position:static;
+        transform:none;
+        justify-self:stretch
+    }
+    .showcase-signature {
+        display:none
+    }
+    .showcase-slide[data-slide="2"] .showcase-product {
+        left:50%;
+        top:56%;
+        width:min(82vw,420px);
+        height:44vh;
+    }
+    .showcase-slide[data-slide="4"] .showcase-product {
+        left:50%;
+        top:56%;
+        width:min(78vw,390px);
+        height:42vh;
+    }
+}
+
+
+/* ==========================================
+   EVENT DECOR - MOBILE RESPONSIVE FIX
+   Actual slide index: 4
+========================================== */
+
+@media screen and (max-width: 620px) {
+
+    /* Keep the decor slide properly contained */
+    .showcase-slide[data-slide="4"] {
+        overflow: hidden;
+    }
+
+    /* TEXT AREA */
+    .showcase-slide[data-slide="4"] .showcase-copy {
+        top: 12%;
+        left: 5%;
+        width: 90%;
+        transform: none;
+        text-align: center;
+        z-index: 10;
+    }
+
+    .showcase-slide[data-slide="4"] .showcase-kicker {
+        margin-bottom: 12px;
+        font-size: 8px;
+    }
+
+    .showcase-slide[data-slide="4"] .showcase-copy h1 {
+        font-size: clamp(46px, 11vw, 62px);
+        line-height: .85;
+        margin-bottom: 12px;
+    }
+
+    .showcase-slide[data-slide="4"] .showcase-copy p {
+        max-width: 290px;
+        margin: 0 auto 12px;
+        font-size: 10px;
+        line-height: 1.6;
+    }
+
+    .showcase-slide[data-slide="4"] .showcase-cta {
+        position: relative;
+        z-index: 10;
+    }
+
+    /* MAIN DECOR PHOTO */
+    .showcase-slide[data-slide="4"] .showcase-product {
+        position: absolute;
+        left: 50%;
+        top: 60%;
+        width: min(82vw, 380px);
+        height: 33vh;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+    .showcase-slide[data-slide="4"] .showcase-product img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    /* FLOATING DECORATIONS */
+    .showcase-slide[data-slide="4"] .showcase-floats {
+        position: absolute;
+        inset: 0;
+        z-index: 3;
+        pointer-events: none;
+    }
+
+    .showcase-slide[data-slide="4"] .showcase-floats .float {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: 50px;
+        object-fit: contain;
+    }
+
+    /* ORANGE BALLOONS - TOP LEFT */
+    .showcase-slide[data-slide="4"] .showcase-floats .f1 {
+        left: 0;
+        right: auto;
+        top: 49%;
+        width: 50px;
+    }
+
+    /* GOLD BALLOONS - TOP RIGHT */
+    .showcase-slide[data-slide="4"] .showcase-floats .f2 {
+        left: auto;
+        right: 0;
+        top: 49%;
+        width: 50px;
+    }
+
+    /* BLUE HOT AIR BALLOON - BOTTOM LEFT */
+    .showcase-slide[data-slide="4"] .showcase-floats .f3 {
+        left: 0;
+        right: auto;
+        top: 75%;
+        width: 53px;
+    }
+
+    /* TEDDY BEAR - BOTTOM RIGHT */
+    .showcase-slide[data-slide="4"] .showcase-floats .f4 {
+        left: auto;
+        right: 0;
+        top: 75%;
+        width: 55px;
+    }
+
+    /* WHITE BALLOONS - RESTORE VISIBILITY */
+    .showcase-slide[data-slide="4"] .showcase-floats .f5 {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: absolute;
+        left: 50%;
+        right: auto;
+        top: 40%;
+        transform: translateX(-50%);
+        width: 48px;
+        height: 48px;
+    }
+
+    /* CAPTION */
+    .showcase-slide[data-slide="4"] .showcase-caption {
+        left: 50%;
+        top: 83%;
+        transform: translateX(-50%);
+        z-index: 4;
+        font-size: 6px;
+    }
+}
+
+/* ==========================================
+   EMY MAANY - COMPLETE MOBILE SHOWCASE FIX
+   Applies to ALL 5 slides
+========================================== */
+
+@media screen and (max-width: 620px) {
+
+    /* Main slide */
+    .showcase-slide[data-slide] {
+        overflow: hidden;
+        isolation: isolate;
+    }
+
+    /* ----------------------------------
+       1. TEXT: Dedicated top area
+    ---------------------------------- */
+
+    .showcase-slide[data-slide] .showcase-copy {
+        position: absolute;
+        top: 11%;
+        left: 5%;
+        width: 90%;
+        transform: none;
+        text-align: center;
+        z-index: 20;
+    }
+
+    .showcase-slide[data-slide] .showcase-kicker {
+        font-size: 8px;
+        margin-bottom: 12px;
+    }
+
+    .showcase-slide[data-slide] .showcase-kicker:before {
+        display: none;
+    }
+
+    .showcase-slide[data-slide] .showcase-copy h1 {
+        font-size: clamp(44px, 11vw, 62px);
+        line-height: .88;
+        margin: 0 0 12px;
+    }
+
+    .showcase-slide[data-slide] .showcase-copy p {
+        max-width: 290px;
+        margin: 0 auto 14px;
+        font-size: 10px;
+        line-height: 1.6;
+    }
+
+    /* ----------------------------------
+       2. DISCOVER MORE BUTTON
+       Always above the main image
+    ---------------------------------- */
+
+    .showcase-slide[data-slide] .showcase-cta {
+        position: relative;
+        display: inline-flex;
+        z-index: 25;
+        height: 38px;
+        min-width: 145px;
+        padding: 0 15px;
+        align-items: center;
+        justify-content: space-between;
+        background: #191411;
+        border: 1px solid rgba(188, 147, 91, .45);
+        border-radius: 30px;
+        color: #d9c9b2;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* ----------------------------------
+       3. MAIN PRODUCT IMAGE
+       Separate area below text
+    ---------------------------------- */
+
+    .showcase-slide[data-slide] .showcase-product {
+        position: absolute;
+        left: 50%;
+        top: 66%;
+        width: min(84vw, 390px);
+        height: 32vh;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .showcase-slide[data-slide] .showcase-product img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    /* ----------------------------------
+       4. FLOATING ELEMENTS
+       Keep all decorations away from text
+    ---------------------------------- */
+
+    .showcase-slide[data-slide] .showcase-floats {
+        position: absolute;
+        inset: 0;
+        z-index: 4;
+        pointer-events: none;
+    }
+
+    .showcase-slide[data-slide] .showcase-floats .float {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+    }
+
+    /* First element - left side */
+    .showcase-slide[data-slide] .showcase-floats .f1 {
+        left: 1%;
+        right: auto;
+        top: 47%;
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Second element - right side */
+    .showcase-slide[data-slide] .showcase-floats .f2 {
+        left: auto;
+        right: 1%;
+        top: 47%;
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Third element - lower left */
+    .showcase-slide[data-slide] .showcase-floats .f3 {
+        left: 1%;
+        right: auto;
+        top: 74%;
+        width: 53px;
+        height: 53px;
+    }
+
+    /* Fourth element - lower right */
+    .showcase-slide[data-slide] .showcase-floats .f4 {
+        left: auto;
+        right: 1%;
+        top: 74%;
+        width: 53px;
+        height: 53px;
+    }
+
+    /* Fifth element - Decor white balloons */
+    .showcase-slide[data-slide="4"] .showcase-floats .f5 {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        left: 50%;
+        right: auto;
+        top: 39%;
+        width: 48px;
+        height: 48px;
+        transform: translateX(-50%);
+    }
+
+    /* ----------------------------------
+       5. BACKGROUND WORD
+    ---------------------------------- */
+
+    .showcase-slide[data-slide] .showcase-word {
+        z-index: 0;
+        left: 50%;
+        top: 62%;
+        font-size: 20vw;
+        opacity: .7;
+    }
+
+    /* ----------------------------------
+       6. CAPTION
+    ---------------------------------- */
+
+    .showcase-slide[data-slide] .showcase-caption {
+        left: 50%;
+        top: 84%;
+        transform: translateX(-50%);
+        z-index: 5;
+        font-size: 6px;
+    }
+
+}

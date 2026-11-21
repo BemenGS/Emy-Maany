@@ -1,140 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact Emy Maany to begin planning your celebration.">
-  <title>Connect | Emy Maany</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="contact.css">
-  <meta name="theme-color" content="#241b18">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Emy Maany">
-  <link rel="manifest" href="/manifest.webmanifest">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
-  <link rel="apple-touch-icon" href="/icon-192.png">
-  <link rel="stylesheet" href="/pwa-install.css">
-</head>
-<body>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Contact Emy Maany to begin planning your celebration." name="description"/>
+  <title>
+   Contact | Emy Maany
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=DM+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+  <link href="contact.css" rel="stylesheet"/>
+  <meta content="#241b18" name="theme-color"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+  <meta content="Emy Maany" name="apple-mobile-web-app-title"/>
+  <link href="/manifest.webmanifest" rel="manifest"/>
+  <link href="/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="/icon-192.png" rel="icon" sizes="192x192" type="image/png"/>
+  <link href="/icon-192.png" rel="apple-touch-icon"/>
+  <link href="/pwa-install.css" rel="stylesheet"/>
+ </head>
+ <body>
+    <!-- =====================================================
+         CONTACT PAGE: Header / Contact Details / Contact Form / Footer
+         ===================================================== -->
   <!-- PRELOADER -->
-  <div class="preloader" aria-hidden="true"><span class="preloader-mark">Emy Maany</span><span class="preloader-line"></span></div>
-
+  <div aria-hidden="true" class="preloader">
+   <span class="preloader-mark">
+    Emy Maany
+   </span>
+   <span class="preloader-line">
+   </span>
+  </div>
   <!-- NAVIGATION -->
   <header class="site-header">
-    <a class="brand" href="index.html">
-      <span class="brand-monogram">E</span>
-      <span class="brand-name">EMY <i>MAANY</i></span>
+   <a class="brand" href="index.html">
+    <span class="brand-monogram">
+     E
+    </span>
+    <span class="brand-name">
+     EMY
+     <i>
+      MAANY
+     </i>
+    </span>
+   </a>
+   <button aria-expanded="false" aria-label="Open navigation" class="menu-toggle">
+    <span>
+    </span>
+    <span>
+    </span>
+   </button>
+   <nav class="main-nav">
+    <a href="index.html">
+     <b>Home</b>
     </a>
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
-    <span></span>
-    <span></span>
-</button>
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="work.html">Our Work</a>
-      <a class="active" href="contact.html">Connect</a>
-      <a class="nav-cta" href="#contact-details">Plan your event <span><b>↗</b></span></a>
-    </nav>
+    <a href="work.html">
+     <b>Our Work</b>
+    </a>
+    <a class="active" href="contact.html">
+     <b>Contact</b>
+    </a>
+    <a class="nav-cta" href="#contact-details">
+     Plan your event
+     <span>
+      <b>
+       &nearrow;
+      </b>
+     </span>
+    </a>
+   </nav>
   </header>
-
   <main>
-    <!-- CONTACT HERO -->
-    <section class="contact-hero">
-      <div class="contact-hero-image"></div>
-      <div class="contact-hero-content reveal">
-        <span class="eyebrow">LET'S BEGIN SOMETHING BEAUTIFUL</span>
-        <h1>Your Moment<br><em>Starts Here.</em></h1>
-        <p>Tell us a little about the Celebration you're Imagining. We'd love to hear from you.</p>
-        <a href="#contact-details" class="scroll-link">FIND YOUR WAY TO US <span><B>↓</B></span></a>
+   <!-- CONTACT HERO -->
+   <section class="contact-hero">
+    <div class="contact-hero-image">
+    </div>
+    <div class="contact-hero-content reveal">
+     <span class="eyebrow">
+      LET'S BEGIN SOMETHING BEAUTIFUL
+     </span>
+     <h1>
+      Your Moment
+      <br/>
+      <em>
+       Starts Here.
+      </em>
+     </h1>
+     <p>
+      Tell us a little about the Celebration you're Imagining. We'd love to hear from you.
+     </p>
+     <a class="scroll-link" href="#contact-details">
+      FIND YOUR WAY TO US
+      <span>
+       <b>
+        &darr;
+       </b>
+      </span>
+     </a>
+    </div>
+   </section>
+   <!-- CONTACT DETAILS -->
+   <section class="contact-section section-pad" id="contact-details">
+    <div class="contact-heading reveal">
+     <span class="eyebrow">
+      THE FIRST HELLO
+     </span>
+     <h2>
+      Good Things Begin
+      <br/>
+      with a
+      <em>
+       Conversation.
+      </em>
+     </h2>
+     <p>
+      For Event Enquiries, Collaborations .
+     </p>
+    </div>
+    <!-- ============================================================================================ -->
+    <div class="contact-options">
+     <!-- Replace the placeholder links below with the real Emy Maany accounts -->
+     <a class="contact-card reveal" href="https://www.facebook.com/profile.php?id=61591181954754" rel="noopener noreferrer" target="_blank">
+      <span class="contact-number">
+       01
+      </span>
+      <!-- <span class="contact-icon">f</span> -->
+      <div class="facebook-icon">
+       <svg class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook" fill="none" height="24" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0h24v24H0z" fill="none" stroke="none">
+        </path>
+        <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3">
+        </path>
+       </svg>
       </div>
-    </section>
-
-    <!-- CONTACT DETAILS -->
-    <section class="contact-section section-pad" id="contact-details">
-      <div class="contact-heading reveal">
-        <span class="eyebrow">THE FIRST HELLO</span>
-        <h2>Good Things Begin<br>with a <em>Conversation.</em></h2>
-        <p>For Event Enquiries, Collaborations .</p>
+      <br/>
+      <span class="contact-label1">
+       FOLLOW ALONG
+      </span>
+      <h3>
+       Facebook
+      </h3>
+      <span class="contact-action">
+       Visit our page &nearrow;
+      </span>
+     </a>
+     <!-- ======================================================================================= -->
+     <a class="contact-card reveal" href="https://www.instagram.com/emy_maany/" rel="noopener noreferrer" target="_blank">
+      <span class="contact-number">
+       02
+      </span>
+      <div class="instagram-icon">
+       <svg class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram" fill="none" height="24" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0h24v24H0z" fill="none" stroke="none">
+        </path>
+        <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10">
+        </path>
+        <path d="M8.5 12a3.5 3.5 0 1 0 7 0a3.5 3.5 0 0 0 -7 0">
+        </path>
+        <path d="M17 7v.01">
+        </path>
+       </svg>
       </div>
-      <!-- ============================================================================================ -->
-      <div class="contact-options">
-        <!-- Replace the placeholder links below with the real Emy Maany accounts -->
-        <a class="contact-card reveal" href="https://www.facebook.com/profile.php?id=61591181954754" target="_blank" rel="noopener noreferrer">
-          <span class="contact-number">01</span>
-          <!-- <span class="contact-icon">f</span> -->
-            <div class="facebook-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
-                </svg>
-             </div>
-
-             <br>
-          <span class="contact-label1">FOLLOW ALONG</span>
-          <h3>Facebook</h3>
-          <span class="contact-action">Visit our page ↗</span>
-        </a>
-
-        <!-- ======================================================================================= -->
-
-        <a class="contact-card reveal" href="https://www.instagram.com/emy_maany/" target="_blank" rel="noopener noreferrer">
-           <span class="contact-number">02</span>
-           <div class="instagram-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10" />
-                <path d="M8.5 12a3.5 3.5 0 1 0 7 0a3.5 3.5 0 0 0 -7 0" />
-                <path d="M17 7v.01" />
-                </svg>
-            </div>
-          <br>
-          <span class="contact-label2">A LITTLE VISUAL INSPIRATION</span>
-          <h3>Instagram</h3>
-          <span class="contact-action">Explore our feed ↗</span>
-        </a>
-
-        <a class="contact-card reveal" href="https://wa.me/201202187631" target="_blank" rel="noopener noreferrer">
-          <span class="contact-number">03</span>
-          <div class="whatsapp-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
-              <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
-            </svg>
-          </div>
-          <br>
-          <span class="contact-label3">LET'S TALK DETAILS</span>
-          <h3>WhatsApp</h3>
-          <span class="contact-action">Start a chat ↗</span>
-        </a>
+      <br/>
+      <span class="contact-label2">
+       A LITTLE VISUAL INSPIRATION
+      </span>
+      <h3>
+       Instagram
+      </h3>
+      <span class="contact-action">
+       Explore our feed &nearrow;
+      </span>
+     </a>
+     <a class="contact-card reveal" href="https://wa.me/201202187631" rel="noopener noreferrer" target="_blank">
+      <span class="contact-number">
+       03
+      </span>
+      <div class="whatsapp-icon">
+       <svg class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp" fill="none" height="24" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0h24v24H0z" fill="none" stroke="none">
+        </path>
+        <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9">
+        </path>
+        <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1">
+        </path>
+       </svg>
       </div>
-
-      <!-- ========================================================================================== -->
-
-      <div class="contact-note reveal">
-        <span class="note-mark">E</span>
-        <div>
-          <span class="eyebrow">A NOTE FROM EMY MAANY</span>
-          <p>Every Celebration Begins With An Idea. Share Yours With Us, And Let's Turn It Into Something Worth <b>REMEMBERING.</b></p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      <a class="footer-brand" href="index.html">EMY <em>MAANY</em></a>
-      <span>Thoughtfully made. Beautifully remembered.</span>
-      <span>© <span class="year"></span> Emy Maany</span>
-      <small>CREATED BY Bemen_GS</small>
-    </footer>
+      <br/>
+      <span class="contact-label3">
+       LET'S TALK DETAILS
+      </span>
+      <h3>
+       WhatsApp
+      </h3>
+      <span class="contact-action">
+       Start a chat &nearrow;
+      </span>
+     </a>
+    </div>
+    <!-- ========================================================================================== -->
+    <div class="contact-note reveal">
+     <span class="note-mark">
+      E
+     </span>
+     <div>
+      <span class="eyebrow">
+       A NOTE FROM EMY MAANY
+      </span>
+      <p>
+       Every Celebration Begins With An Idea. Share Yours With Us, And Let's Turn It Into Something Worth
+       <b>
+        REMEMBERING.
+       </b>
+      </p>
+     </div>
+    </div>
+   </section>
+   <!-- FOOTER -->
+   <footer class="site-footer">
+    <a class="footer-brand" href="index.html">
+     EMY
+     <em>
+      MAANY
+     </em>
+    </a>
+    <span>
+     Thoughtfully made. Beautifully remembered.
+    </span>
+    <span>
+     &copy;
+     <span class="year">
+     </span>
+     Emy Maany
+    </span>
+    <small>
+     CREATED BY Bemen_GS
+    </small>
+   </footer>
   </main>
-  <script src="contact.js"></script>
-  <script src="site-enhancements.js" defer></script>
-  <script src="/pwa-install.js" defer></script>
-</body>
+  <script src="contact.js">
+  </script>
+  <script defer="" src="site-enhancements.js">
+  </script>
+  <script defer="" src="/pwa-install.js">
+  </script>
+ </body>
 </html>
