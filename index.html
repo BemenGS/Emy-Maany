@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=DM+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-  <link href="home.css" rel="stylesheet"/>
+  <link href="home.css" rel="stylesheet"/><!-- Shared dark/light theme styles --> <link href="theme.css" rel="stylesheet"/>
   <link href="showcase.css" rel="stylesheet"/>
   <meta content="#241b18" name="theme-color"/>
   <meta content="yes" name="mobile-web-app-capable"/>
@@ -55,6 +55,11 @@
     </span>
    </button>
    <nav aria-label="Main navigation" class="main-nav">
+     <!-- THEME TOGGLE: moved beside the mobile menu button on small screens -->
+     <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
+      <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+      <span class="theme-toggle-label">Dark</span>
+     </button>
     <a class="active" href="index.html">
      <b>Home</b>
     </a>
@@ -63,12 +68,6 @@
     </a>
     <a href="contact.html">
      <b>Contact</b>
-    </a>
-    <a class="nav-cta" href="contact.html">
-     Plan Your Event
-     <span>
-      &nearrow;
-     </span>
     </a>
    </nav>
   </header>
@@ -154,7 +153,6 @@
         <img alt="" class="float f3" src="animals\فيل صغير لطيف ثلاثي الأبعاد.png"/>
         <img alt="" class="float f4" src="animals\قرد كرتوني ثلاثي الأبعاد لطيف.png"/>
        </div>
-       <!--      -->
        <span class="showcase-caption">
         A WORLD OF WONDER
        </span>
@@ -512,7 +510,7 @@
   </script>
   <script defer="" src="site-enhancements.js">
   </script>
-  <script defer="" src="/pwa-install.js">
+  <!-- Shared dark/light theme behavior --> <script defer src="theme.js"></script>  <script defer="" src="/pwa-install.js">
   </script>
  </body>
 </html>

@@ -1,0 +1,306 @@
+/* =========================================================
+   EMY MAANY — SHARED SECTION THEME
+   Only the requested content sections respond to this theme.
+   Header, hero areas, galleries, footer and other controls
+   intentionally retain their original appearance.
+   ========================================================= */
+
+/* -------------------- Theme palettes -------------------- */
+:root {
+    color-scheme: light;
+    --theme-light-bg: #F5F5F3;       /* Smoke white */
+    --theme-light-surface: #FFFFFF;
+    --theme-light-text: #28221E;
+    --theme-light-muted: #716A62;
+    --theme-light-accent: #9A7950;
+    --theme-light-line: rgba(45, 35, 28, 0.15);
+
+    --theme-dark-bg: #2B2118;        /* Warm espresso brown */
+    --theme-dark-surface: #35291F;
+    --theme-dark-text: #F1E8DC;
+    --theme-dark-muted: #B8AA98;
+    --theme-dark-accent: #C8A878;
+    --theme-dark-line: rgba(215, 193, 159, 0.22);
+}
+
+/* -------------------- Light mode (default) -------------------- */
+html[data-theme="light"] {
+    color-scheme: light;
+}
+
+/* -------------------- Dark mode -------------------- */
+html[data-theme="dark"] {
+    color-scheme: dark;
+}
+
+/* =========================================================
+   Shared theme toggle
+   The button is placed inside desktop navigation and moved
+   beside the hamburger button on tablet/mobile by theme.js.
+   ========================================================= */
+.theme-toggle {
+    width: 42px;
+    min-width: 42px;
+    height: 42px;
+    padding: 0 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 1px solid rgba(183, 154, 112, 0.48);
+    border-radius: 50px;
+    background: transparent;
+    color: #D7C19F;
+    font: 600 9px/1 "DM Sans", Arial, sans-serif;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: background-color .25s ease, color .25s ease,
+                border-color .25s ease, transform .25s ease;
+    flex: 0 0 auto;
+    position: relative;
+    z-index: 40;
+}
+
+.theme-toggle:hover {
+    background: rgba(183, 154, 112, 0.14);
+    border-color: #C8A878;
+    transform: translateY(-1px);
+}
+
+.theme-toggle:focus-visible {
+    outline: 2px solid #C8A878;
+    outline-offset: 4px;
+}
+
+.theme-toggle-icon {
+    font-size: 17px;
+    line-height: 1;
+}
+
+.theme-toggle-label {
+    display: none;
+}
+
+/* =========================================================
+   HOME — INTRODUCTION
+   ========================================================= */
+html[data-theme="light"] .intro,
+html[data-theme="light"] .experience-counters,
+html[data-theme="light"] .services,
+html[data-theme="light"] .portfolio-section,
+html[data-theme="light"] .contact-section {
+    --ink: var(--theme-light-text);
+    --muted: var(--theme-light-muted);
+    --ivory: var(--theme-light-bg);
+    --paper: var(--theme-light-surface);
+    --gold: var(--theme-light-accent);
+    --line: var(--theme-light-line);
+
+    background-color: var(--theme-light-bg);
+    color: var(--theme-light-text);
+}
+
+html[data-theme="dark"] .intro,
+html[data-theme="dark"] .experience-counters,
+html[data-theme="dark"] .services,
+html[data-theme="dark"] .portfolio-section,
+html[data-theme="dark"] .contact-section {
+    --ink: var(--theme-dark-text);
+    --muted: var(--theme-dark-muted);
+    --ivory: var(--theme-dark-bg);
+    --paper: var(--theme-dark-surface);
+    --gold: var(--theme-dark-accent);
+    --line: var(--theme-dark-line);
+
+    background-color: var(--theme-dark-bg);
+    color: var(--theme-dark-text);
+}
+
+/* Apply readable text colors only inside the selected sections. */
+html[data-theme="light"] :is(.intro, .experience-counters, .services, .portfolio-section, .contact-section)
+:is(h1, h2, h3, h4, p, span, small, li, a, strong, figcaption) {
+    color: var(--theme-light-text);
+}
+
+html[data-theme="dark"] :is(.intro, .experience-counters, .services, .portfolio-section, .contact-section)
+:is(h1, h2, h3, h4, p, span, small, li, a, strong, figcaption) {
+    color: var(--theme-dark-text);
+}
+
+/* Secondary copy, descriptions and supporting labels. */
+html[data-theme="light"] :is(.intro, .experience-counters, .services, .portfolio-section, .contact-section)
+:is(.intro-text p, .section-heading > p, .service-card p,
+    .portfolio-intro p, .section-count, .contact-heading > p,
+    .contact-label1, .contact-label2, .contact-label3, .contact-action,
+    .contact-number, .contact-note p) {
+    color: var(--theme-light-muted);
+}
+
+html[data-theme="dark"] :is(.intro, .experience-counters, .services, .portfolio-section, .contact-section)
+:is(.intro-text p, .section-heading > p, .service-card p,
+    .portfolio-intro p, .section-count, .contact-heading > p,
+    .contact-label1, .contact-label2, .contact-label3, .contact-action,
+    .contact-number, .contact-note p) {
+    color: var(--theme-dark-muted);
+}
+
+/* Keep highlighted words, small indices and decorative accents refined. */
+html[data-theme="light"] :is(.intro, .experience-counters, .services, .portfolio-section, .contact-section)
+:is(em, .eyebrow, .service-meta, .counter-card strong, .note-mark, .contact-number) {
+    color: var(--theme-light-accent);
+}
+
+html[data-theme="dark"] :is(.intro, .experience-counters, .services, .portfolio-section, .contact-section)
+:is(em, .eyebrow, .service-meta, .counter-card strong, .note-mark, .contact-number) {
+    color: var(--theme-dark-accent);
+}
+
+/* -------------------- Home: introduction -------------------- */
+html[data-theme="dark"] .intro .fine-line,
+html[data-theme="dark"] .experience-counters .counter-card,
+html[data-theme="dark"] .portfolio-section .section-top,
+html[data-theme="dark"] .contact-section .contact-options {
+    border-color: var(--theme-dark-line);
+}
+
+html[data-theme="light"] .intro .fine-line,
+html[data-theme="light"] .experience-counters .counter-card,
+html[data-theme="light"] .portfolio-section .section-top,
+html[data-theme="light"] .contact-section .contact-options {
+    border-color: var(--theme-light-line);
+}
+
+/* -------------------- Home: experience counters -------------------- */
+html[data-theme="dark"] .experience-counters .counter-card span {
+    color: var(--theme-dark-muted);
+}
+
+/* -------------------- Home: services -------------------- */
+html[data-theme="light"] .services .service-card,
+html[data-theme="light"] .services .service-meta,
+html[data-theme="light"] .services .service-card h3 {
+    color: var(--theme-light-text);
+}
+
+html[data-theme="dark"] .services .service-card,
+html[data-theme="dark"] .services .service-meta,
+html[data-theme="dark"] .services .service-card h3 {
+    color: var(--theme-dark-text);
+}
+
+/* -------------------- Our Work: decorations, cakes, catering -------------------- */
+html[data-theme="light"] .portfolio-section .collection-card,
+html[data-theme="light"] .portfolio-section .collection-item,
+html[data-theme="light"] .portfolio-section .project-card {
+    color: var(--theme-light-text);
+}
+
+html[data-theme="dark"] .portfolio-section .collection-card,
+html[data-theme="dark"] .portfolio-section .collection-item,
+html[data-theme="dark"] .portfolio-section .project-card {
+    color: var(--theme-dark-text);
+}
+
+html[data-theme="dark"] .portfolio-section .collection-card p,
+html[data-theme="dark"] .portfolio-section .collection-item p,
+html[data-theme="dark"] .portfolio-section .project-card p {
+    color: var(--theme-dark-muted);
+}
+
+/* -------------------- Contact: contact details only -------------------- */
+html[data-theme="light"] .contact-section .contact-card:hover {
+    background: #EAEAE7;
+}
+
+html[data-theme="dark"] .contact-section .contact-card {
+    border-color: var(--theme-dark-line);
+}
+
+html[data-theme="dark"] .contact-section .contact-card:hover {
+    background: #35291F;
+}
+
+html[data-theme="dark"] .contact-section .contact-note {
+    border-color: var(--theme-dark-line);
+}
+
+/* =========================================================
+   TABLET + MOBILE
+   Keep the theme control beside the hamburger button.
+   ========================================================= */
+@media (max-width: 800px) {
+    .site-header .theme-toggle {
+        width: 46px;
+        min-width: 46px;
+        height: 46px;
+        margin-left: auto;
+        margin-right: 10px;
+        padding: 0;
+        border-radius: 2px;
+        background: transparent;
+        z-index: 10001;
+    }
+
+    .site-header .theme-toggle-icon {
+        font-size: 20px;
+    }
+
+    .site-header .theme-toggle-label {
+        display: none;
+    }
+
+    /* Keep the control clear of the full-screen navigation layer. */
+    .site-header .menu-toggle {
+        flex: 0 0 50px;
+    }
+}
+
+@media (max-width: 380px) {
+    .site-header .theme-toggle {
+        width: 42px;
+        min-width: 42px;
+        height: 42px;
+        margin-right: 7px;
+    }
+}
+
+/* Respect reduced-motion preferences. */
+@media (prefers-reduced-motion: reduce) {
+    .theme-toggle {
+        transition: none;
+    }
+}
+
+
+/* -------------------- Interactive portfolio cards -------------------- */
+html[data-theme="light"] .portfolio-section .collection-card {
+    background: rgba(255, 255, 255, 0.62);
+    border-color: var(--theme-light-line);
+}
+
+html[data-theme="dark"] .portfolio-section .collection-card {
+    background: #35291F;
+    border-color: var(--theme-dark-line);
+    color: var(--theme-dark-text);
+}
+
+html[data-theme="dark"] .portfolio-section .collection-card-kicker {
+    color: var(--theme-dark-muted);
+}
+
+html[data-theme="dark"] .portfolio-section .collection-card:hover,
+html[data-theme="dark"] .portfolio-section .collection-card:focus-visible {
+    border-color: rgba(200, 168, 120, 0.72);
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.24);
+}
+
+/* Keep contact option cards coordinated with the selected section theme. */
+html[data-theme="light"] .contact-section .contact-card {
+    border-color: var(--theme-light-line);
+    color: var(--theme-light-text);
+}
+
+html[data-theme="dark"] .contact-section .contact-card h3,
+html[data-theme="dark"] .contact-section .contact-card .contact-action {
+    color: var(--theme-dark-text);
+}

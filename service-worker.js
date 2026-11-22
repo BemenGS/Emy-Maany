@@ -1,4 +1,4 @@
-const CACHE_NAME = "emy-maany-shell-v4";
+const CACHE_NAME = "emy-maany-shell-v5";
 const APP_SHELL = [
 "/",
 "/index.html",
@@ -9,6 +9,8 @@ const APP_SHELL = [
 "/showcase.js",
 "/work.css",
 "/contact.css",
+"/theme.css",
+"/theme.js",
 "/pwa-install.css",
 "/home.js",
 "/work.js",

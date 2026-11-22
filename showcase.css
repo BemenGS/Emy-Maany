@@ -169,6 +169,7 @@
     z-index:3;
     pointer-events:none
 }
+/* Speed of animation */
 .showcase-floats .float {
     position:absolute;
     display:block;
@@ -176,7 +177,7 @@
     height:clamp(68px,8vw,128px);
     object-fit:contain;
     filter:drop-shadow(0 12px 13px rgba(0,0,0,.23));
-    animation:floatAround 5.8s ease-in-out infinite alternate;
+    animation:floatAround 1.5s ease-in-out infinite alternate;
 }
 /* Elements are deliberately kept outside the hero product's footprint. */
 .showcase-floats .f1 {
