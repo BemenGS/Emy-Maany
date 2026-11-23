@@ -3,13 +3,25 @@
  <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <!-- Restore the saved writing direction before the first layout paint. -->
+  <script>
+   try {
+    if (localStorage.getItem("emy-maany-language") === "ar") {
+     document.documentElement.lang = "ar";
+     document.documentElement.dir = "rtl";
+     document.documentElement.dataset.language = "ar";
+    }
+   } catch (error) {
+    /* The language controller applies the default if storage is unavailable. */
+   }
+  </script>
   <meta content="Contact Emy Maany to begin planning your celebration." name="description"/>
   <title>
    Contact | Emy Maany
   </title>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=DM+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=DM+Sans:wght@300;400;500;600&amp;family=Alexandria:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
   <link href="contact.css" rel="stylesheet"/> <!-- Shared dark/light theme styles -->  <link href="theme.css" rel="stylesheet"/>
   <meta content="#241b18" name="theme-color"/>
   <meta content="yes" name="mobile-web-app-capable"/>
@@ -21,6 +33,7 @@
   <link href="/icon-192.png" rel="icon" sizes="192x192" type="image/png"/>
   <link href="/icon-192.png" rel="apple-touch-icon"/>
   <link href="/pwa-install.css" rel="stylesheet"/>
+  <link href="language.css" rel="stylesheet"/>
  </head>
  <body>
     <!-- =====================================================
@@ -37,8 +50,8 @@
   <!-- NAVIGATION -->
   <header class="site-header">
    <a class="brand" href="index.html">
-    <span class="brand-monogram">
-     E
+    <span class="brand-monogram brand-logo-frame">
+     <img class="brand-logo" src="emy-maany-logo.png" alt="Emy Maany logo" width="72" height="48"/>
     </span>
     <span class="brand-name">
      EMY
@@ -59,6 +72,7 @@
       <span class="theme-toggle-icon" aria-hidden="true">☾</span>
       <span class="theme-toggle-label">Dark</span>
      </button>
+     <button class="language-toggle" type="button" aria-label="Switch language to Arabic" title="Switch language to Arabic" aria-pressed="false"><span data-language-label data-no-translate>العربية</span></button>
     <a href="index.html">
      <b>Home</b>
     </a>
@@ -108,9 +122,8 @@
      <h2>
       Good Things Begin
       <br/>
-      with a
       <em>
-       Conversation.
+       with a Conversation.
       </em>
      </h2>
      <p>
@@ -240,6 +253,7 @@
   </main>
   <script src="contact.js">
   </script>
+  <script defer src="i18n.js"></script>
   <script defer="" src="site-enhancements.js">
   </script>
   <!-- Shared dark/light theme behavior --> <script defer src="theme.js"></script> <script defer="" src="/pwa-install.js">

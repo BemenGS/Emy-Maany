@@ -3,13 +3,25 @@
  <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <!-- Restore the saved writing direction before the first layout paint. -->
+  <script>
+   try {
+    if (localStorage.getItem("emy-maany-language") === "ar") {
+     document.documentElement.lang = "ar";
+     document.documentElement.dir = "rtl";
+     document.documentElement.dataset.language = "ar";
+    }
+   } catch (error) {
+    /* The language controller applies the default if storage is unavailable. */
+   }
+  </script>
   <meta content="Emy Maany &mdash; considered celebrations, beautiful details, unforgettable moments." name="description"/>
   <title>
    Emy Maany | Celebrations, Curated
   </title>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=DM+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=DM+Sans:wght@300;400;500;600&amp;family=Alexandria:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
   <link href="home.css" rel="stylesheet"/><!-- Shared dark/light theme styles --> <link href="theme.css" rel="stylesheet"/>
   <link href="showcase.css" rel="stylesheet"/>
   <meta content="#241b18" name="theme-color"/>
@@ -22,6 +34,7 @@
   <link href="/icon-192.png" rel="icon" sizes="192x192" type="image/png"/>
   <link href="/icon-192.png" rel="apple-touch-icon"/>
   <link href="/pwa-install.css" rel="stylesheet"/>
+  <link href="language.css" rel="stylesheet"/>
  </head>
  <body>
     <!-- =====================================================
@@ -38,8 +51,8 @@
   <!-- NAVIGATION -->
   <header class="site-header">
    <a aria-label="Emy Maany home" class="brand" href="index.html">
-    <span class="brand-monogram">
-     E
+    <span class="brand-monogram brand-logo-frame">
+     <img class="brand-logo" src="emy-maany-logo.png" alt="Emy Maany logo" width="72" height="48"/>
     </span>
     <span class="brand-name">
      EMY
@@ -60,6 +73,7 @@
       <span class="theme-toggle-icon" aria-hidden="true">☾</span>
       <span class="theme-toggle-label">Dark</span>
      </button>
+     <button class="language-toggle" type="button" aria-label="Switch language to Arabic" title="Switch language to Arabic" aria-pressed="false"><span data-language-label data-no-translate>العربية</span></button>
     <a class="active" href="index.html">
      <b>Home</b>
     </a>
@@ -148,10 +162,10 @@
         <img alt="Animal themed birthday cake" src="animals\animals .png"/>
        </div>
        <div aria-hidden="true" class="showcase-floats">
-        <img alt="" class="float f1" src="animals\أسد كرتوني لطيف ثلاثي الأبعاد.png"/>
-        <img alt="" class="float f2" src="animals\زرافة كرتونية لطيفة ثلاثية الأبعاد.png"/>
-        <img alt="" class="float f3" src="animals\فيل صغير لطيف ثلاثي الأبعاد.png"/>
-        <img alt="" class="float f4" src="animals\قرد كرتوني ثلاثي الأبعاد لطيف.png"/>
+        <img alt="" class="float f1" src="animals\elephant slider.png"/>
+        <img alt="" class="float f2" src="animals\giraffe slider.png"/>
+        <img alt="" class="float f3" src="animals\lion slider.png"/>
+        <img alt="" class="float f4" src="animals\monkey slider.png"/>
        </div>
        <span class="showcase-caption">
         A WORLD OF WONDER
@@ -226,10 +240,10 @@
         <img alt="Crispy chicken sandwich" src="chicken snadwich/chicken-sandwich-cutout.png"/>
        </div>
        <div aria-hidden="true" class="showcase-floats">
-        <img alt="" class="float f1" src="chicken snadwich/فيليه دجاج مقرمش معزول.png"/>
-        <img alt="" class="float f2" src="chicken snadwich/أوراق خس طازجة على خلفية شفافة.png"/>
-        <img alt="" class="float f3" src="chicken snadwich/أوراق خس طازجة على خلفية شفافة.png"/>
-        <img alt="" class="float f4" src="chicken snadwich/فيليه دجاج مقرمش معزول.png"/>
+        <img alt="" class="float f1" src="chicken snadwich/chicken slider.png"/>
+        <img alt="" class="float f2" src="chicken snadwich/lettuce slider.png"/>
+        <img alt="" class="float f3" src="chicken snadwich/lettuce slider.png"/>
+        <img alt="" class="float f4" src="chicken snadwich/chicken slider.png"/>
        </div>
        <span class="showcase-caption">
         PREPARED TO BE SHARED
@@ -508,6 +522,7 @@
   </script>
   <script defer="" src="showcase.js">
   </script>
+  <script defer src="i18n.js"></script>
   <script defer="" src="site-enhancements.js">
   </script>
   <!-- Shared dark/light theme behavior --> <script defer src="theme.js"></script>  <script defer="" src="/pwa-install.js">

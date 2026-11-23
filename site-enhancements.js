@@ -1,10 +1,6 @@
-/* Emy Maany site enhancements — English-only */
+/* Emy Maany site enhancements — shared page behavior */
 (() => {
     'use strict';
-    // Always keep the site in its original English presentation.
-    document.documentElement.lang = 'en';
-    document.documentElement.dir = 'ltr';
-    document.body.classList.remove('is-arabic');
     // Keep the installed Android PWA in portrait orientation where supported.
     // Browsers may reject runtime locking in a normal tab; the manifest setting
     // is the primary orientation preference for the installed app.
@@ -22,11 +18,6 @@
     ;
     lockPortrait();
     window.addEventListener('pageshow', lockPortrait);
-    try {
-        localStorage.removeItem('emy-maany-language');
-    }
-    catch (_) {
-    }
     // Reading progress and back-to-top controls.
     const progress = document.createElement('div');
     progress.className = 'reading-progress';
@@ -82,3 +73,5 @@
     }
 }
 )();
+
+/* Back-to-top arrow is a direction-neutral UI icon, not Arabic text. */

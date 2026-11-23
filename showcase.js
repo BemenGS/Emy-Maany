@@ -29,8 +29,9 @@
     next?.addEventListener('click', () => go(active + 1));
     tabs.forEach((tab, i) => tab.addEventListener('click', () => go(i)));
     document.addEventListener('keydown', e => {
-        if (e.key === 'ArrowLeft') go(active - 1);
-        if (e.key === 'ArrowRight') go(active + 1);
+        const rtl = document.documentElement.dir === 'rtl';
+        if (e.key === 'ArrowLeft') go(active + (rtl ? 1 : -1));
+        if (e.key === 'ArrowRight') go(active + (rtl ? -1 : 1));
     }
     );
     let sx = 0, sy = 0;
@@ -43,7 +44,10 @@
     }
     );
     stage?.addEventListener('touchend', e => {
-        const dx=e.changedTouches[0].clientX-sx, dy=e.changedTouches[0].clientY-sy; if(Math.abs(dx)>48 && Math.abs(dx)>Math.abs(dy)) go(active+(dx<0?1:-1));
+        const dx=e.changedTouches[0].clientX-sx, dy=e.changedTouches[0].clientY-sy; if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy)) {
+            const rtl = document.documentElement.dir === "rtl";
+            go(active + (rtl ? (dx > 0 ? 1 : -1) : (dx < 0 ? 1 : -1)));
+        }
     }
     , {
         passive:true

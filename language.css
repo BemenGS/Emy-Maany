@@ -1,0 +1,396 @@
+/* =========================================================
+   EMY MAANY — ARABIC TYPOGRAPHY & RTL LAYOUT
+   Loaded after the original page and theme stylesheets.
+   English presentation remains unchanged.
+   ========================================================= */
+.language-toggle {
+    min-width: 48px;
+    height: 42px;
+    padding: 0 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(183, 154, 112, .48);
+    border-radius: 50px;
+    background: transparent;
+    color: #D7C19F;
+    font: 600 11px/1 "Alexandria", sans-serif;
+    cursor: pointer;
+    flex: 0 0 auto;
+    position: relative;
+    z-index: 40;
+    transition: background-color .25s ease, border-color .25s ease, transform .25s ease;
+}
+.language-toggle:hover {
+    background: rgba(183, 154, 112, .14);
+    border-color: #C8A878;
+    transform: translateY(-1px);
+}
+.language-toggle:focus-visible {
+    outline: 2px solid #C8A878;
+    outline-offset: 4px;
+}
+
+html[dir="rtl"] body,
+html[dir="rtl"] button,
+html[dir="rtl"] input,
+html[dir="rtl"] textarea,
+html[dir="rtl"] select {
+    font-family: "Alexandria", Tahoma, sans-serif;
+}
+html[dir="rtl"] body {
+    text-align: start;
+    font-weight: 400;
+}
+html[dir="rtl"] :is(h1, h2, h3, h4, p, a, button, span, small, label) {
+    font-family: "Alexandria", Tahoma, sans-serif;
+    letter-spacing: normal;
+    text-transform: none;
+}
+/* Preserve the original Latin wordmark and monogram typography. */
+html[dir="rtl"] .brand,
+html[dir="rtl"] .brand *,
+html[dir="rtl"] .footer-brand,
+html[dir="rtl"] .preloader-mark,
+html[dir="rtl"] .note-mark,
+html[dir="rtl"] .contact-card h3 {
+    font-family: var(--sans);
+}
+html[dir="rtl"] .brand-monogram,
+html[dir="rtl"] .footer-brand,
+html[dir="rtl"] .preloader-mark,
+html[dir="rtl"] .note-mark,
+html[dir="rtl"] .contact-card h3 {
+    font-family: var(--serif);
+}
+html[dir="rtl"] :is(.showcase-copy h1, .showcase-word, .showcase-kicker,
+    .showcase-caption, .showcase-tabs button, .showcase-signature,
+    .work-hero h1, .contact-hero h1, .portfolio-intro h2,
+    .contact-heading h2, .work-cta h2) {
+    font-family: "Alexandria", Tahoma, sans-serif;
+    font-weight: 400;
+    line-height: 1.45;
+    letter-spacing: 0;
+}
+html[dir="rtl"] .eyebrow,
+html[dir="rtl"] .showcase-kicker,
+html[dir="rtl"] .showcase-caption,
+html[dir="rtl"] .showcase-tabs button,
+html[dir="rtl"] .section-count,
+html[dir="rtl"] .contact-number,
+html[dir="rtl"] .contact-label1,
+html[dir="rtl"] .contact-label2,
+html[dir="rtl"] .contact-label3 {
+    letter-spacing: 0;
+}
+html[dir="rtl"] .site-header,
+html[dir="rtl"] .brand,
+html[dir="rtl"] .main-nav,
+html[dir="rtl"] .site-footer,
+html[dir="rtl"] .showcase-footer,
+html[dir="rtl"] .viewer-header,
+html[dir="rtl"] .viewer-image-meta {
+    direction: rtl;
+}
+html[dir="rtl"] .brand-monogram {
+    border-right: 0;
+    padding-right: 0;
+    border-left: 1px solid rgba(255, 255, 255, .4);
+    padding-left: 13px;
+}
+html[dir="rtl"] .main-nav a:not(.nav-cta)::after {
+    left: auto;
+    right: 0;
+}
+html[dir="rtl"] .theme-toggle,
+html[dir="rtl"] .language-toggle {
+    font-family: "Alexandria", Tahoma, sans-serif;
+}
+html[dir="rtl"] .showcase-copy {
+    left: auto;
+    right: 10%;
+    text-align: right;
+}
+html[dir="rtl"] .showcase-copy p {
+    margin-right: 0;
+    margin-left: auto;
+}
+html[dir="rtl"] .showcase-kicker::before {
+    margin: 0 0 3px 12px;
+}
+html[dir="rtl"] .showcase-orbit {
+    left: auto;
+    right: 66%;
+}
+html[dir="rtl"] .showcase-product {
+    left: auto;
+    right: 67%;
+}
+html[dir="rtl"] .showcase-slide[data-slide="4"] .showcase-product {
+    left: auto;
+    right: 68%;
+}
+html[dir="rtl"] .showcase-word {
+    direction: ltr;
+}
+html[dir="rtl"] .showcase-caption {
+    left: auto;
+    right: 67%;
+}
+html[dir="rtl"] .showcase-floats .float { left: auto; }
+html[dir="rtl"] .showcase-floats .f1 { right: 43%; }
+html[dir="rtl"] .showcase-floats .f2 { right: 84%; }
+html[dir="rtl"] .showcase-floats .f3 { right: 44%; }
+html[dir="rtl"] .showcase-floats .f4 { right: 86%; }
+html[dir="rtl"] .showcase-floats .f5 { right: 54%; }
+html[dir="rtl"] .showcase-slide[data-slide="1"] .f1 { right: 43%; }
+html[dir="rtl"] .showcase-slide[data-slide="1"] .f2 { right: 85%; }
+html[dir="rtl"] .showcase-slide[data-slide="1"] .f3 { right: 44%; }
+html[dir="rtl"] .showcase-slide[data-slide="1"] .f4 { right: 86%; }
+html[dir="rtl"] .showcase-slide[data-slide="2"] .f1 { right: 42%; }
+html[dir="rtl"] .showcase-slide[data-slide="2"] .f2 { right: 86%; }
+html[dir="rtl"] .showcase-slide[data-slide="2"] .f3 { right: 43%; }
+html[dir="rtl"] .showcase-slide[data-slide="2"] .f4 { right: 86%; }
+html[dir="rtl"] .showcase-slide[data-slide="3"] .f1 { right: 42%; }
+html[dir="rtl"] .showcase-slide[data-slide="3"] .f2 { right: 85%; }
+html[dir="rtl"] .showcase-slide[data-slide="3"] .f3 { right: 43%; }
+html[dir="rtl"] .showcase-slide[data-slide="3"] .f4 { right: 86%; }
+html[dir="rtl"] .showcase-slide[data-slide="4"] .f1 { right: 42%; }
+html[dir="rtl"] .showcase-slide[data-slide="4"] .f2 { right: 85%; }
+html[dir="rtl"] .showcase-slide[data-slide="4"] .f3 { right: 43%; }
+html[dir="rtl"] .showcase-slide[data-slide="4"] .f4 { right: 86%; }
+html[dir="rtl"] .showcase-cta { direction: rtl; }
+html[dir="rtl"] .showcase-arrows button {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .viewer-arrow {
+    transform: translateY(-50%) scaleX(-1);
+}
+html[dir="rtl"] .showcase-arrows button:hover { transform: scaleX(-1) translateY(-1px); }
+html[dir="rtl"] .showcase-tabs { direction: rtl; }
+html[dir="rtl"] .work-hero-bg {
+    background-image: linear-gradient(270deg, rgba(25, 18, 15, .76), rgba(25, 18, 15, .28)), url("https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=2200&q=90");
+}
+html[dir="rtl"] .contact-hero-image {
+    background-image: linear-gradient(270deg, rgba(25, 18, 15, .8), rgba(25, 18, 15, .3)), url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=2200&q=90");
+}
+html[dir="rtl"] .work-hero-content,
+html[dir="rtl"] .contact-hero-content {
+    margin-left: 0;
+    margin-right: 13%;
+    text-align: right;
+}
+html[dir="rtl"] .contact-hero-content > p,
+html[dir="rtl"] .portfolio-intro p {
+    margin-right: 0;
+    margin-left: auto;
+}
+html[dir="rtl"] .vertical-note {
+    right: auto;
+    left: 5%;
+}
+html[dir="rtl"] .section-top,
+html[dir="rtl"] .collection-card-info,
+html[dir="rtl"] .contact-options,
+html[dir="rtl"] .contact-note {
+    direction: rtl;
+}
+html[dir="rtl"] .contact-card {
+    align-items: flex-start;
+    border-right: 0;
+    border-left: 1px solid var(--line);
+}
+html[dir="rtl"] .contact-card:last-child { border-left: 0; }
+html[dir="rtl"] .note-mark {
+    border-right: 0;
+    padding-right: 0;
+    border-left: 1px solid var(--line);
+    padding-left: 28px;
+}
+html[dir="rtl"] .viewer-prev { left: auto; right: 16px; }
+html[dir="rtl"] .viewer-next { right: auto; left: 16px; }
+html[dir="rtl"] .viewer-header { text-align: right; }
+html[dir="rtl"] .viewer-arrow { transform: translateY(-50%) scaleX(-1); }
+html[dir="rtl"] .viewer-image-meta { text-align: right; }
+html[dir="rtl"] .showcase-count,
+html[dir="rtl"] .section-count,
+html[dir="rtl"] .year,
+html[dir="rtl"] .contact-number {
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+html[dir="rtl"] .site-footer { text-align: right; }
+html[dir="rtl"] .pwa-install-banner,
+html[dir="rtl"] .pwa-install-actions {
+    direction: rtl;
+}
+html[dir="rtl"] .pwa-install-banner,
+html[dir="rtl"] .pwa-install-button,
+html[dir="rtl"] .pwa-install-dismiss {
+    font-family: "Alexandria", Tahoma, sans-serif;
+}
+html[dir="rtl"] .contact-action,
+html[dir="rtl"] .scroll-link,
+html[dir="rtl"] .btn,
+html[dir="rtl"] .text-link { direction: rtl; }
+
+@media (max-width: 800px) {
+    .site-header .language-toggle {
+        width: 46px;
+        min-width: 46px;
+        height: 46px;
+        margin-inline: 0 7px;
+        padding: 0 5px;
+        border-radius: 2px;
+        z-index: 10001;
+        font-size: 10px;
+    }
+    html[dir="rtl"] .site-header .theme-toggle { margin-left: 0; margin-right: 0; }
+    html[dir="rtl"] .site-header .language-toggle { margin-left: 7px; margin-right: 0; }
+    html[dir="rtl"] .showcase-copy { left: auto; right: 7%; width: 34%; text-align: right; }
+    html[dir="rtl"] .showcase-product { left: auto; right: 65%; }
+    html[dir="rtl"] .showcase-caption { left: auto; right: 65%; }
+    html[dir="rtl"] .main-nav { left: 0; right: auto; transform: translateX(-105%); }
+    html[dir="rtl"] .main-nav.open { transform: none; }
+    html[dir="rtl"] .work-hero-content,
+    html[dir="rtl"] .contact-hero-content { margin-right: 8%; margin-left: 8%; }
+}
+@media (max-width: 560px) {
+    html[dir="rtl"] .showcase-copy { left: auto; right: 7%; width: 86%; text-align: center; }
+    html[dir="rtl"] .showcase-product { left: 50%; right: auto; }
+    html[dir="rtl"] .showcase-orbit { left: 50%; right: auto; }
+    html[dir="rtl"] .showcase-caption { left: 50%; right: auto; transform: translateX(-50%); }
+    html[dir="rtl"] .showcase-floats .f1 { left: auto; right: 4%; }
+    html[dir="rtl"] .showcase-floats .f2 { right: auto; left: 4%; }
+    html[dir="rtl"] .showcase-floats .f3 { left: auto; right: 5%; }
+    html[dir="rtl"] .showcase-floats .f4 { right: auto; left: 4%; }
+    html[dir="rtl"] .contact-card { border-left: 0; }
+    html[dir="rtl"] .note-mark { padding-left: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .language-toggle { transition: none; }
+}
+
+
+/* =========================================================
+   FINAL CASCADE OVERRIDES FOR THE FULL ORIGINAL SHOWCASE CSS
+   The source slider contains later slide-specific/mobile fixes.
+   These higher-specificity RTL rules mirror those exact positions.
+   ========================================================= */
+html[dir="rtl"] .showcase-slide[data-slide] .showcase-copy {
+    left: auto;
+    right: 10%;
+}
+html[dir="rtl"] .showcase-slide[data-slide="2"] .showcase-product {
+    left: auto;
+    right: 67%;
+}
+html[dir="rtl"] .showcase-slide[data-slide="4"] .showcase-product {
+    left: auto;
+    right: 68%;
+}
+html[dir="rtl"] .showcase-slide[data-slide="1"] .showcase-floats .f1 { left: auto; right: 43%; }
+html[dir="rtl"] .showcase-slide[data-slide="1"] .showcase-floats .f2 { left: auto; right: 85%; }
+html[dir="rtl"] .showcase-slide[data-slide="1"] .showcase-floats .f3 { left: auto; right: 44%; }
+html[dir="rtl"] .showcase-slide[data-slide="1"] .showcase-floats .f4 { left: auto; right: 86%; }
+html[dir="rtl"] .showcase-slide[data-slide="2"] .showcase-floats .f1 { left: auto; right: 42%; }
+html[dir="rtl"] .showcase-slide[data-slide="2"] .showcase-floats .f2 { left: auto; right: 86%; }
+html[dir="rtl"] .showcase-slide[data-slide="2"] .showcase-floats .f3 { left: auto; right: 43%; }
+html[dir="rtl"] .showcase-slide[data-slide="2"] .showcase-floats .f4 { left: auto; right: 86%; }
+html[dir="rtl"] .showcase-slide[data-slide="3"] .showcase-floats .f1 { left: auto; right: 42%; }
+html[dir="rtl"] .showcase-slide[data-slide="3"] .showcase-floats .f2 { left: auto; right: 85%; }
+html[dir="rtl"] .showcase-slide[data-slide="3"] .showcase-floats .f3 { left: auto; right: 43%; }
+html[dir="rtl"] .showcase-slide[data-slide="3"] .showcase-floats .f4 { left: auto; right: 86%; }
+html[dir="rtl"] .showcase-slide[data-slide="4"] .showcase-floats .f1 { left: auto; right: 42%; }
+html[dir="rtl"] .showcase-slide[data-slide="4"] .showcase-floats .f2 { left: auto; right: 85%; }
+html[dir="rtl"] .showcase-slide[data-slide="4"] .showcase-floats .f3 { left: auto; right: 43%; }
+html[dir="rtl"] .showcase-slide[data-slide="4"] .showcase-floats .f4 { left: auto; right: 86%; }
+html[dir="rtl"] .showcase-tabs button::after {
+    left: 100%;
+    right: 0;
+}
+html[dir="rtl"] .showcase-tabs button.active::after {
+    left: 0;
+    right: 0;
+}
+
+@media (max-width: 620px) {
+    html[dir="rtl"] .showcase-slide[data-slide] .showcase-copy {
+        left: auto;
+        right: 5%;
+        width: 90%;
+        text-align: center;
+    }
+    html[dir="rtl"] .showcase-slide[data-slide] .showcase-copy h1 {
+        line-height: 1.45;
+    }
+    html[dir="rtl"] .showcase-slide[data-slide] .showcase-product {
+        left: 50%;
+        right: auto;
+    }
+    html[dir="rtl"] .showcase-slide[data-slide] .showcase-caption {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+    html[dir="rtl"] .showcase-slide[data-slide] .showcase-floats .f1 { left: auto; right: 1%; }
+    html[dir="rtl"] .showcase-slide[data-slide] .showcase-floats .f2 { left: 1%; right: auto; }
+    html[dir="rtl"] .showcase-slide[data-slide] .showcase-floats .f3 { left: auto; right: 1%; }
+    html[dir="rtl"] .showcase-slide[data-slide] .showcase-floats .f4 { left: 1%; right: auto; }
+    html[dir="rtl"] .showcase-slide[data-slide="4"] .showcase-floats .f5 {
+        left: 50%;
+        right: auto;
+    }
+    html[dir="rtl"] .showcase-slide[data-slide] .showcase-word {
+        left: 50%;
+        right: auto;
+    }
+}
+
+/* Mirror the shared reading indicator and floating utility control. */
+html[dir="rtl"] .reading-progress {
+    left: auto;
+    right: 0;
+}
+html[dir="rtl"] .reading-progress span {
+    background: linear-gradient(270deg, #eee9e2, #8c8986);
+}
+html[dir="rtl"] .back-to-top {
+    left: 28px;
+    right: auto;
+}
+@media (max-width: 700px) {
+    html[dir="rtl"] .back-to-top {
+        left: 16px;
+        right: auto;
+    }
+}
+
+/* =========================================================
+   ARABIC READABILITY — generous vertical metrics for dots,
+   diacritics and descending glyphs in Alexandria.
+   ========================================================= */
+html[dir="rtl"] body {
+    line-height: 1.9;
+}
+html[dir="rtl"] :is(p, li, label, input, textarea, select, .collection-card-info,
+    .viewer-description, .contact-action, .contact-note p, .service-card p,
+    .intro-text p, .portfolio-intro p, .contact-heading p) {
+    line-height: 1.9;
+}
+html[dir="rtl"] :is(h1, h2, h3, h4, .showcase-copy h1, .work-hero h1,
+    .contact-hero h1, .portfolio-intro h2, .contact-heading h2, .work-cta h2) {
+    line-height: 1.5;
+    overflow: visible;
+}
+html[dir="rtl"] .showcase-copy h1 {
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+html[dir="rtl"] .back-to-top {
+    direction: ltr;
+    font-family: Arial, sans-serif;
+    font-variant-emoji: text;
+    line-height: 1;
+    text-align: center;
+}

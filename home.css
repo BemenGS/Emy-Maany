@@ -791,3 +791,45 @@ body {
         height:44px
     }
 }
+
+/* Supplied Emy Maany logo replaces the former E monogram. */
+.brand-logo-frame {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 54px;
+    flex: 0 0 76px;
+    overflow: visible;
+    padding-right: 13px;
+    border-right: 1px solid rgba(255,255,255,.4);
+    border-left: 0;
+    font-size: 0;
+}
+.brand-logo {
+    display: block;
+    width: 64px;
+    height: 48px;
+    object-fit: contain;
+    object-position: center;
+}
+@media (max-width: 800px) {
+    .brand-logo-frame {
+        width: 68px;
+        height: 50px;
+        flex-basis: 68px;
+        padding-right: 10px;
+    }
+    .brand-logo { width: 58px; height: 44px; }
+}
+html[dir="rtl"] .brand-logo-frame {
+    padding-right: 0;
+    padding-left: 13px;
+    border-right: 0;
+    border-left: 1px solid rgba(255,255,255,.4);
+}
+@media (max-width: 800px) {
+    html[dir="rtl"] .brand-logo-frame {
+        padding-left: 10px;
+    }
+}

@@ -53,8 +53,19 @@ contact.js
 SHARED / SITE-WIDE FILES
 ------------------------
 site-enhancements.js
-  Shared site behavior: English/LTR enforcement, portrait preference for
-  installed PWA, reading progress indicator, back-to-top button and counters.
+  Shared site behavior: portrait preference for installed PWA, reading progress
+  indicator, back-to-top button and counters.
+
+i18n.js
+  Shared EN/AR language controller, Arabic translations, RTL/LTR state and
+  saved language preference. Dynamic gallery content uses its translation helper.
+
+language.css
+  Arabic typography, RTL layout adjustments, mirrored navigation arrows and
+  language-toggle styling.
+
+README-LANGUAGE-SYSTEM.txt
+  Notes for maintaining translations, language persistence and PWA integration.
 
 pwa-install.css
   Styling for the install banner shown by supported browsers.

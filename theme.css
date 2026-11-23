@@ -304,3 +304,28 @@ html[data-theme="dark"] .contact-section .contact-card h3,
 html[data-theme="dark"] .contact-section .contact-card .contact-action {
     color: var(--theme-dark-text);
 }
+
+/* =========================================================
+   HEADER UTILITY CONTROLS — shared compact group (EN / AR)
+   ========================================================= */
+.header-tools {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    direction: ltr;
+}
+@media (max-width: 800px) {
+    .site-header .header-tools {
+        margin: 0;
+        gap: 8px;
+    }
+    .site-header .header-tools .theme-toggle,
+    .site-header .header-tools .language-toggle {
+        margin: 0;
+    }
+}
+@media (max-width: 380px) {
+    .site-header .header-tools { gap: 6px; margin: 0; }
+}

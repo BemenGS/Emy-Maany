@@ -21,7 +21,8 @@ Navigation changes
 ------------------
 - Removed the "Plan Your Event" navigation button from all three pages.
 - Desktop order is: theme toggle, Home, Our Work, Contact.
-- On tablet/mobile, the theme toggle sits immediately beside the menu button.
+- On tablet/mobile, the theme toggle and language toggle sit together immediately beside the menu button.
+- The theme uses its own localStorage key and remains independent from the selected language.
 
 Color palette
 -------------
@@ -37,8 +38,8 @@ Dark mode:
 
 Persistence and PWA
 -------------------
-The service-worker cache version was increased to v5 and the new shared
-theme files were added to the app shell. This helps the PWA fetch the
+The service-worker cache version was increased to v6 and the shared theme
+and language files were added to the app shell. This helps the PWA fetch the
 new files after deployment. If an installed PWA keeps showing an old
 version, close it completely and reopen it after the updated service
 worker has activated.

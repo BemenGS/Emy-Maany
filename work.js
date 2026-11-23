@@ -192,24 +192,29 @@ document.addEventListener("DOMContentLoaded", () => {
         ]
     }
     ;
+    // Translate dynamic portfolio cards from their canonical English collection data.
+    const translate = value => window.EmyI18n ? window.EmyI18n.t(value) : value;
+
     // Build each category's group cards from the collection data.
-    Object.entries(collections).forEach(([category, groups]) => {
+    function renderCollectionCards() {
+      Object.entries(collections).forEach(([category, groups]) => {
         const grid = document.querySelector(`[data-collection="${category}"]`);
         if (!grid) return;
+        grid.innerHTML = "";
         groups.forEach((group, index) => {
             const card = document.createElement("button");
             card.type = "button";
             card.className = "collection-card reveal";
-            card.setAttribute("aria-label", `Explore ${group.title}, ${group.images.length} photographs`);
+            card.setAttribute("aria-label", `${translate("Explore")} ${translate(group.title)}, ${group.images.length} ${translate("photographs")}`);
             card.innerHTML = `
         <span class="collection-card-image">
-          <img src="${group.cover}" alt="${group.title}" loading="lazy">
-          <span class="collection-card-count">${String(group.images.length).padStart(2, "0")} PHOTOGRAPHS</span>
+          <img src="${group.cover}" alt="${translate(group.title)}" loading="lazy">
+          <span class="collection-card-count">${String(group.images.length).padStart(2, "0")} ${translate("PHOTOGRAPHS")}</span>
         </span>
         <span class="collection-card-info">
           <span>
-            <span class="collection-card-kicker">${group.kicker}</span>
-            <span class="collection-card-title">${group.title}</span>
+            <span class="collection-card-kicker">${translate(group.kicker)}</span>
+            <span class="collection-card-title">${translate(group.title)}</span>
           </span>
           <span class="collection-card-open" aria-hidden="true">↗</span>
         </span>`;
@@ -218,8 +223,20 @@ document.addEventListener("DOMContentLoaded", () => {
             if (window.IntersectionObserver) observerForCard(card);
         }
         );
+      });
     }
-    );
+    renderCollectionCards();
+    // Rebuild translated cards whenever the visitor changes language.
+    document.addEventListener("emy-language-change", () => {
+        renderCollectionCards();
+        if (activeGroup) {
+            viewerTitle.textContent = translate(activeGroup.title);
+            viewerCategory.textContent = translate(categoryNames[activeCategory]);
+            viewerDescription.textContent = translate(activeGroup.description);
+            renderViewerImage();
+            renderViewerThumbnails();
+        }
+    });
     // Reusable reveal observer for cards inserted after the page has loaded.
     function observerForCard(element) {
         if (!("IntersectionObserver" in window)) {
@@ -255,14 +272,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     ;
     let activeGroup = null;
+    let activeCategory = "";
     let activeIndex = 0;
     let lastFocusedElement = null;
     function renderViewerImage() {
         if (!activeGroup) return;
         const [caption, src] = activeGroup.images[activeIndex];
         viewerImage.src = src;
-        viewerImage.alt = `${activeGroup.title} — ${caption}`;
-        viewerCaption.textContent = caption;
+        viewerImage.alt = `${translate(activeGroup.title)} — ${translate(caption)}`;
+        viewerCaption.textContent = translate(caption);
         viewerCounter.textContent = `${String(activeIndex + 1).padStart(2, "0")} / ${String(activeGroup.images.length).padStart(2, "0")}`;
         thumbnails.querySelectorAll(".viewer-thumb").forEach((button, index) => {
             button.classList.toggle("is-active", index === activeIndex);
@@ -272,17 +290,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     function openCollection(group, category) {
         activeGroup = group;
+        activeCategory = category;
         activeIndex = 0;
         lastFocusedElement = document.activeElement;
-        viewerTitle.textContent = group.title;
-        viewerCategory.textContent = categoryNames[category];
-        viewerDescription.textContent = group.description;
+        viewerTitle.textContent = translate(group.title);
+        viewerCategory.textContent = translate(categoryNames[category]);
+        viewerDescription.textContent = translate(group.description);
+        renderViewerThumbnails();
+        renderViewerImage();
+        viewer.classList.add("is-open");
+        viewer.setAttribute("aria-hidden", "false");
+        document.body.classList.add("viewer-locked");
+        viewer.querySelector(".viewer-close")?.focus();
+    }
+    function renderViewerThumbnails() {
+        if (!activeGroup) return;
         thumbnails.innerHTML = "";
-        group.images.forEach(([caption, src], index) => {
+        activeGroup.images.forEach(([caption, src], index) => {
             const thumb = document.createElement("button");
             thumb.type = "button";
             thumb.className = "viewer-thumb";
-            thumb.setAttribute("aria-label", `Show image ${index + 1}: ${caption}`);
+            thumb.setAttribute("aria-label", `${translate("Show image")} ${index + 1}: ${translate(caption)}`);
             thumb.innerHTML = `<img src="${src}" alt="" loading="lazy">`;
             thumb.addEventListener("click", () => {
                 activeIndex = index;
@@ -292,11 +320,6 @@ document.addEventListener("DOMContentLoaded", () => {
             thumbnails.appendChild(thumb);
         }
         );
-        renderViewerImage();
-        viewer.classList.add("is-open");
-        viewer.setAttribute("aria-hidden", "false");
-        document.body.classList.add("viewer-locked");
-        viewer.querySelector(".viewer-close")?.focus();
     }
     function closeCollection() {
         viewer.classList.remove("is-open");
@@ -318,8 +341,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("keydown", event => {
         if (!viewer?.classList.contains("is-open")) return;
         if (event.key === "Escape") closeCollection();
-        if (event.key === "ArrowLeft") stepImage(-1);
-        if (event.key === "ArrowRight") stepImage(1);
+        const rtl = document.documentElement.dir === "rtl";
+        if (event.key === "ArrowLeft") stepImage(rtl ? 1 : -1);
+        if (event.key === "ArrowRight") stepImage(rtl ? -1 : 1);
     }
     );
     // Keep the page year current.
