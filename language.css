@@ -413,3 +413,29 @@ html[dir="rtl"] .back-to-top {
         transform: translate(50%, -50%);
     }
 }
+
+
+
+/* Arabic mobile navigation: preserve normal connected Arabic shaping. */
+@media (max-width: 800px) {
+    html[dir="rtl"] .site-header .main-nav a,
+    html[dir="rtl"] .site-header .main-nav a b {
+        letter-spacing: 0 !important;
+        word-spacing: normal;
+        text-transform: none;
+    }
+    html[dir="rtl"] .site-header .main-nav a {
+        font-family: "Alexandria", Tahoma, sans-serif;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .site-header .header-tools .language-toggle,
+    html[dir="rtl"] .site-header .header-tools .language-toggle {
+        margin: 0;
+    }
+    html[dir="rtl"] .site-header .header-tools .theme-toggle {
+        margin: 0;
+    }
+}

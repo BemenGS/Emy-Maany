@@ -5,7 +5,7 @@ Files added
 -----------
 theme.css
     Shared visual styles for the dark/light theme. It only targets:
-    - Home: Introduction, Experience Counters, Services
+    - Home: Welcome, About introduction, Introduction, Experience Counters, Services
     - Our Work: Decorations, Cakes, Catering portfolio sections
     - Contact: Contact Details
 

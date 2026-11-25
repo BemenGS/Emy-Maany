@@ -1,5 +1,5 @@
 /* FILE: service-worker.js | Styles and/or behavior for the Emy Maany website. */
-const CACHE_NAME = "emy-maany-shell-v8";
+const CACHE_NAME = "emy-maany-shell-v9";
 const APP_SHELL = [
 "/",
 "/index.html",

@@ -353,3 +353,154 @@ html[data-theme="dark"] .contact-section .contact-card .contact-action {
 /* Keep the bilingual pill dimensions consistent after RTL responsive rules. */
 .site-header .header-tools .language-toggle{width:98px;min-width:98px;height:44px;border-radius:30px;padding:3px}
 @media(max-width:800px){.site-header .header-tools .language-toggle{width:92px;min-width:92px;height:42px}}
+
+
+
+/* =========================================================
+   HOME INTRO — include the Welcome and About sections in the
+   shared theme so the first two Home sections follow the switch.
+   ========================================================= */
+html[data-theme="light"] .welcome-section,
+html[data-theme="light"] .about-intro {
+    background: var(--theme-light-bg);
+    color: var(--theme-light-text);
+}
+html[data-theme="dark"] .welcome-section {
+    background: #191411;
+    color: var(--theme-dark-text);
+}
+html[data-theme="dark"] .about-intro {
+    background: #211914;
+    color: var(--theme-dark-text);
+}
+
+html[data-theme="light"] .welcome-logo-wrap {
+    background: radial-gradient(circle at 50% 45%, rgba(154,121,80,.10), transparent 68%), #fff;
+    border-color: var(--theme-light-line);
+}
+html[data-theme="dark"] .welcome-logo-wrap {
+    background: radial-gradient(circle at 50% 45%, rgba(200,168,120,.10), transparent 68%), #211914;
+    border-color: var(--theme-dark-line);
+}
+
+html[data-theme="light"] .welcome-copy h1,
+html[data-theme="light"] .about-intro-grid h2 {
+    color: var(--theme-light-text);
+}
+html[data-theme="dark"] .welcome-copy h1,
+html[data-theme="dark"] .about-intro-grid h2 {
+    color: var(--theme-dark-text);
+}
+html[data-theme="light"] .welcome-copy h1 span,
+html[data-theme="light"] .about-intro-grid h2 em,
+html[data-theme="light"] .welcome-copy .eyebrow,
+html[data-theme="light"] .about-intro .eyebrow,
+html[data-theme="light"] .welcome-link span,
+html[data-theme="light"] .about-intro-link span {
+    color: var(--theme-light-accent);
+}
+html[data-theme="dark"] .welcome-copy h1 span,
+html[data-theme="dark"] .about-intro-grid h2 em,
+html[data-theme="dark"] .welcome-copy .eyebrow,
+html[data-theme="dark"] .about-intro .eyebrow,
+html[data-theme="dark"] .welcome-link span,
+html[data-theme="dark"] .about-intro-link span {
+    color: var(--theme-dark-accent);
+}
+html[data-theme="light"] .welcome-tagline {
+    color: #8d704d;
+}
+html[data-theme="dark"] .welcome-tagline {
+    color: #d0b58d;
+}
+html[data-theme="light"] .welcome-description,
+html[data-theme="light"] .about-intro-copy p {
+    color: var(--theme-light-muted);
+}
+html[data-theme="dark"] .welcome-description,
+html[data-theme="dark"] .about-intro-copy p {
+    color: var(--theme-dark-muted);
+}
+html[data-theme="light"] .about-intro-rule {
+    background: var(--theme-light-line);
+}
+html[data-theme="dark"] .about-intro-rule {
+    background: var(--theme-dark-line);
+}
+html[data-theme="light"] .about-intro-index {
+    color: var(--theme-light-muted);
+}
+html[data-theme="dark"] .about-intro-index {
+    color: #887967;
+}
+html[data-theme="light"] .welcome-link,
+html[data-theme="light"] .about-intro-link {
+    color: var(--theme-light-text);
+    border-color: var(--theme-light-line);
+}
+html[data-theme="dark"] .welcome-link,
+html[data-theme="dark"] .about-intro-link {
+    color: #e5d3b8;
+    border-color: rgba(200,168,120,.42);
+}
+html[data-theme="light"] .welcome-link:hover,
+html[data-theme="light"] .about-intro-link:hover {
+    border-color: var(--theme-light-accent);
+    background: rgba(154,121,80,.08);
+}
+html[data-theme="dark"] .welcome-link:hover,
+html[data-theme="dark"] .about-intro-link:hover {
+    border-color: var(--theme-dark-accent);
+    background: rgba(200,168,120,.10);
+}
+
+
+/* Final mobile header sizing overrides (after shared control defaults). */
+@media (max-width: 800px) {
+    .site-header {
+        gap: 6px;
+        padding-inline: clamp(12px, 4vw, 28px);
+    }
+    .site-header .brand {
+        flex: 0 1 auto;
+        min-width: 0;
+        gap: 8px;
+    }
+    .site-header .header-tools {
+        flex: 0 0 auto;
+        gap: 6px;
+        margin-inline: auto 0;
+    }
+    .site-header .header-tools .theme-toggle {
+        flex: 0 0 42px;
+        width: 42px;
+        min-width: 42px;
+        height: 42px;
+        margin: 0;
+    }
+    .site-header .header-tools .language-toggle {
+        flex: 0 0 88px;
+        width: 88px;
+        min-width: 88px;
+        height: 42px;
+        margin: 0;
+    }
+    .site-header .menu-toggle {
+        flex: 0 0 44px;
+        width: 44px;
+        min-width: 44px;
+        height: 44px;
+        padding: 8px;
+        margin: 0;
+    }
+}
+@media (max-width: 380px) {
+    .site-header .brand-name { display: none; }
+    .site-header .header-tools { gap: 5px; }
+    .site-header .header-tools .theme-toggle {
+        flex-basis: 40px; width: 40px; min-width: 40px; height: 40px;
+    }
+    .site-header .header-tools .language-toggle {
+        flex-basis: 78px; width: 78px; min-width: 78px; height: 40px;
+    }
+}
