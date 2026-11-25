@@ -1,3 +1,4 @@
+/* OUR WORK SCRIPT — portfolio collections, gallery rendering and viewer controls. */
 /* =========================================================
    EMY SWEETS — PORTFOLIO INTERACTIONS
    ========================================================= */

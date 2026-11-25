@@ -833,3 +833,40 @@ html[dir="rtl"] .brand-logo-frame {
         padding-left: 10px;
     }
 }
+
+
+/* =========================================================
+   HOME — BRAND INTRO SECTIONS (WELCOME + ABOUT)
+   Espresso, ivory and muted-gold palette; responsive layouts.
+   ========================================================= */
+.welcome-section{position:relative;overflow:hidden;padding-top:clamp(76px,9vw,132px);padding-bottom:clamp(76px,9vw,132px);background:#191411;color:#eee5d9}
+.welcome-inner{width:min(1240px,100%);margin-inline:auto;display:grid;grid-template-columns:minmax(280px,.9fr) minmax(320px,1.1fr);align-items:center;gap:clamp(42px,8vw,120px)}
+.welcome-logo-wrap{min-height:300px;display:grid;place-items:center;padding:clamp(28px,5vw,62px);border:1px solid rgba(200,168,120,.22);border-radius:4px;background:radial-gradient(circle at 50% 45%,rgba(200,168,120,.10),transparent 68%),#211914}
+.welcome-logo{display:block;width:min(100%,390px);max-height:340px;object-fit:contain}
+.welcome-copy{max-width:620px}
+.welcome-copy .eyebrow,.about-intro .eyebrow{color:#c8a878;letter-spacing:.22em}
+.welcome-copy h1{margin:18px 0 10px;color:#eee5d9;font:600 clamp(58px,8vw,104px)/.98 "Cormorant Garamond",Georgia,serif;letter-spacing:-.045em}
+.welcome-copy h1 span{color:#c8a878}
+.welcome-tagline{margin:0 0 22px;color:#d0b58d;font:italic 500 clamp(19px,2.2vw,27px)/1.35 "Cormorant Garamond",Georgia,serif}
+.welcome-description{max-width:540px;color:#b8aa98;font-size:15px;line-height:1.9}
+.welcome-link,.about-intro-link{display:inline-flex;align-items:center;gap:22px;margin-top:22px;padding:13px 20px;border:1px solid rgba(200,168,120,.42);border-radius:40px;color:#e5d3b8;font-size:10px;font-weight:600;letter-spacing:.12em;text-decoration:none;transition:background .25s,border-color .25s,transform .25s}
+.welcome-link:hover,.about-intro-link:hover{transform:translateY(-2px);border-color:#c8a878;background:rgba(200,168,120,.10)}
+.welcome-link span,.about-intro-link span{color:#c8a878;font-size:17px}
+.about-intro{padding-top:clamp(70px,8vw,112px);padding-bottom:clamp(70px,8vw,112px);background:#211914;color:#eee5d9}
+.about-intro-heading{width:min(1240px,100%);margin:0 auto clamp(38px,5vw,70px);display:flex;align-items:center;gap:22px}
+.about-intro-rule{height:1px;flex:1;background:rgba(200,168,120,.28)}
+.about-intro-index{color:#887967;font:500 9px "DM Sans",sans-serif;letter-spacing:.16em;white-space:nowrap}
+.about-intro-grid{width:min(1240px,100%);margin-inline:auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(38px,8vw,120px);align-items:start}
+.about-intro-grid h2{max-width:570px;margin:0;color:#eee5d9;font:500 clamp(42px,5.6vw,72px)/1.08 "Cormorant Garamond",Georgia,serif;letter-spacing:-.035em}
+.about-intro-grid h2 em{color:#c8a878;font-weight:400}
+.about-intro-copy p{margin:0 0 18px;color:#b8aa98;font-size:14px;line-height:1.95}
+.showcase{position:relative}
+.showcase-section-label{position:absolute;z-index:8;top:30px;left:50%;transform:translateX(-50%);color:#b8a487;font:600 9px "DM Sans",sans-serif;letter-spacing:.22em;text-transform:uppercase;white-space:nowrap;pointer-events:none}
+html[dir=rtl] .showcase-section-label{font-family:"Alexandria",Tahoma,sans-serif;letter-spacing:0}
+html[dir=rtl] .welcome-copy,html[dir=rtl] .about-intro-grid{text-align:right}
+html[dir=rtl] .welcome-copy h1{letter-spacing:0;line-height:1.2}
+html[dir=rtl] .welcome-description,html[dir=rtl] .about-intro-copy p{line-height:2}
+html[dir=rtl] .about-intro-heading{direction:rtl}
+@media(max-width:900px){.welcome-inner{gap:38px;grid-template-columns:minmax(220px,.85fr) minmax(280px,1.15fr)}.welcome-logo-wrap{min-height:260px}}
+@media(max-width:680px){.welcome-section{padding-top:76px;padding-bottom:76px}.welcome-inner,.about-intro-grid{grid-template-columns:1fr;gap:32px}.welcome-logo-wrap{min-height:220px;padding:26px}.welcome-logo{max-height:220px;width:min(78%,320px)}.welcome-copy{text-align:center;margin-inline:auto}.welcome-copy h1{font-size:clamp(58px,16vw,82px)}.welcome-description{margin-inline:auto;font-size:13px}.about-intro{padding-top:66px;padding-bottom:66px}.about-intro-heading{gap:12px;margin-bottom:30px}.about-intro-index{font-size:8px}.about-intro-grid{text-align:center}.about-intro-grid h2{font-size:clamp(40px,11vw,58px)}.about-intro-copy p{font-size:13px}.showcase-section-label{top:16px;font-size:8px}html[dir=rtl] .welcome-copy,html[dir=rtl] .about-intro-grid{text-align:center}}
+@media(prefers-reduced-motion:reduce){.welcome-link,.about-intro-link{transition:none}}

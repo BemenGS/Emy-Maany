@@ -37,12 +37,12 @@
   "DISCOVER MORE": "اكتشفوا المزيد",
   "MADE UNIQUELY YOURS": "صُممت خصيصًا لكم",
   "LITTLE MOMENTS, BIG MAGIC": "لحظات صغيرة، وسحر كبير",
-  "Birthday": "عيد ميلاد",
-  "Boy.": "للصبي.",
+  "Cake": "تورتة",
+  "Boy.": "ولد.",
   "Playful characters, joyful colours and a cake made just for him.": "شخصيات مرحة وألوان مبهجة وكعكة صُممت خصيصًا له.",
   "A WORLD OF WONDER": "عالم من البهجة",
   "YOUR DAY, YOUR FAIRYTALE": "يومكم، وحكايتكم الساحرة",
-  "Girl.": "للفتاة.",
+  "Girl.": "للبنت.",
   "Sweet colours, lovely characters and a cake made just for her.": "ألوان رقيقة وشخصيات محببة وكعكة أُعدّت خصيصًا لها.",
   "SWEET DETAILS, FOREVER": "تفاصيل حلوة لا تُنسى",
   "THE TABLE, THOUGHTFULLY SET": "مائدة أُعدّت بعناية",
@@ -51,15 +51,15 @@
   "Delicious details and inviting bites, prepared for sharing.": "مذاقات شهية وتفاصيل مدروسة، أُعدّت لتجمع الأحبة.",
   "PREPARED TO BE SHARED": "أُعدّت لتُشارك",
   "THE SETTING FOR YOUR STORY": "أجواء تليق بحكايتكم",
-  "Event": "تنسيق",
-  "Decor.": "المناسبات.",
+  "Event": "مناسبة",
+  "Decor.": "زينة.",
   "Atmosphere, thoughtful styling and beautiful details in every corner.": "أجواء آسرة وتنسيق متقن وتفاصيل جميلة في كل زاوية.",
   "EVERY DETAIL IN ITS PLACE": "لكل تفصيلة مكانها",
   "WEDDING": "زفاف",
   "BIRTHDAY BOY": "عيد ميلاد صبي",
   "BIRTHDAY GIRL": "عيد ميلاد فتاة",
   "CATERING": "ضيافة",
-  "DECOR": "تنسيق",
+  "DECOR": "زينة",
   "CAKES · CATERING · EVENT STYLING": "كعكات · ضيافة · تنسيق مناسبات",
   "A COMPLETE CELEBRATION HOUSE": "وجهتكم المتكاملة للاحتفالات",
   "The Beauty is in Every Detail.": "الجمال يكمن في كل تفصيلة.",
@@ -67,14 +67,14 @@
   "We bring Event Styling, Bespoke Cakes and Thoughtful Catering under one Creative Roof — shaping a Seamless Experience that Feels Personal, polished and Entirely Yours.": "نجمع تنسيق المناسبات والكعكات المصممة خصيصًا والضيافة الراقية تحت سقف إبداعي واحد، لنصنع تجربة متكاملة تنبض بالخصوصية والرقي وتعكس ذوقكم.",
   "Contact ↗": "تواصلوا معنا ↗",
   "Years of Cake & Sweets Experience": "سنوات من الخبرة في الكعكات والحلويات",
-  "Years of Event Decorations Experience": "سنوات من الخبرة في تنسيق المناسبات",
+  "Years of Event Decorations Experience": "سنوات من الخبرة في تزيين المناسبات",
   "Happy Customers": "عملاء سعداء",
   "WHAT WE DO": "ما نقدمه لكم",
   "One vision. Every detail.": "رؤية واحدة. وكل التفاصيل.",
   "All the Elements of an Extraordinary Event, Thoughtfully Brought Together.": "كل عناصر المناسبة الاستثنائية، في تناغم أُعدّ بعناية.",
   "01 / THE SETTING": "01 / الأجواء",
   "↗": "↗",
-  "Event décor": "تنسيق المناسبات",
+  "Event décor": "تزيين المناسبات",
   "Atmosphere, Styling and Beautiful spaces that set the scene.": "أجواء آسرة وتنسيق أنيق ومساحات جميلة ترسم ملامح مناسبتكم.",
   "02 / THE CENTREPIECE": "02 / التحفة الرئيسية",
   "Bespoke cakes": "كعكات مصممة خصيصًا",
@@ -97,7 +97,7 @@
   "A CURATED COLLECTION / EMY MAANY": "مختارات بعناية / إيمي معاني",
   "01 — THE SETTING": "01 — الأجواء",
   "01 / 03": "01 / 03",
-  "Event Decorations.": "تنسيق المناسبات.",
+  "Event Decorations.": "تزيين المناسبات.",
   "We Transform Spaces into Atmospheres — from Intimate Tablescapes to Statement Installations. Every Colour, Texture and Finishing Touch has a Purpose.": "نحوّل المساحات إلى أجواء استثنائية، من تنسيقات الموائد الحميمة إلى التجهيزات اللافتة. لكل لون وملمس ولمسة نهائية غاية مدروسة.",
   "02 — THE CENTREPIECE": "02 — التحفة الرئيسية",
   "02 / 03": "02 / 03",
@@ -167,7 +167,7 @@
   "Canapés for your guests": "مقبلات لضيوفكم",
   "Fresh small plates": "أطباق صغيرة طازجة",
   "A carefully prepared bite": "لقمة أُعدّت بعناية",
-  "EVENT DECORATIONS": "تنسيق المناسبات",
+  "EVENT DECORATIONS": "تزيين المناسبات",
   "BESPOKE CAKES": "كعكات مصممة خصيصًا",
   "EVENT CATERING": "ضيافة المناسبات",
   "PHOTOGRAPHS": "صور",
@@ -195,7 +195,7 @@
   "Every Celebration Begins With An Idea. Share Yours With Us, And Let's Turn It Into Something Worth": "كل احتفال يبدأ بفكرة. شاركونا فكرتكم، ودعونا نحولها إلى شيء يستحق أن يبقى في",
   "Emy Maany | Celebrations, Curated": "إيمي معاني | احتفالات بتفاصيل منتقاة",
   "Emy Maany — considered celebrations, beautiful details, unforgettable moments.": "إيمي معاني — احتفالات مدروسة، وتفاصيل جميلة، ولحظات لا تُنسى.",
-  "Explore Emy Maany event décor, bespoke cakes and catering.": "اكتشفوا تنسيق المناسبات والكعكات المصممة خصيصًا والضيافة الراقية من إيمي معاني.",
+  "Explore Emy Maany event décor, bespoke cakes and catering.": "اكتشفوا تزيين المناسبات والكعكات المصممة خصيصًا والضيافة الراقية من إيمي معاني.",
   "Contact Emy Maany to begin planning your celebration.": "تواصلوا مع إيمي معاني لبدء التخطيط لمناسبتكم.",
   "The Beauty is": "الجمال يكمن",
   "in Every Detail.": "في كل تفصيلة.",
@@ -209,7 +209,7 @@
   "Birthday Girl": "عيد ميلاد فتاة",
   "Catering": "الضيافة",
   "Celebration": "احتفال",
-  "Event Decor": "تنسيق المناسبات",
+  "Event Decor": "تزيين المناسبات",
   "Let's take a look at Our Work": "اكتشفوا أعمالنا",
   "Made With Care.": "صُنعت بعناية.",
   "Remembered Forever.": "لتُذكر إلى الأبد.",
@@ -217,13 +217,13 @@
   "cakes.": "كعكات.",
   "Thoughtful": "مدروسة",
   "catering.": "الضيافة.",
-  "Decorations.": "التنسيقات.",
+  "Decorations.": "زينة.",
   "Your Moment": "لحظتكم",
   "Starts Here.": "تبدأ من هنا.",
   "Good Things Begin": "الأشياء الجميلة تبدأ",
   "Conversation.": "بحوار.",
   "REMEMBERING.": "الذاكرة.",
-  "Decoration collections": "مجموعات تنسيق المناسبات",
+  "Decoration collections": "مجموعات تزيين المناسبات",
   "Cake collections": "مجموعات الكعكات",
   "Catering collections": "مجموعات الضيافة",
   "Emy Maany home": "الصفحة الرئيسية لإيمي معاني",
@@ -231,7 +231,7 @@
   "Animal themed birthday cake": "كعكة عيد ميلاد بطابع الحيوانات",
   "Pink teddy bear birthday cake": "كعكة عيد ميلاد بدب وردي",
   "Crispy chicken sandwich": "شطيرة دجاج مقرمشة",
-  "Teddy bear themed event decoration": "تنسيق مناسبة بطابع الدب",
+  "Teddy bear themed event decoration": "تزيين مناسبة بطابع الدب",
   "Emy Maany experience": "خبرة إيمي معاني",
   "in": "في",
   "FIND YOUR WAY TO US": "اعثروا على طريق التواصل معنا",
@@ -247,7 +247,19 @@
   "In Safari, tap Share (the square with the arrow), then choose ‘Add to Home Screen’ and tap Add.": "في متصفح سفاري، اضغطوا على مشاركة (المربع الذي يحمل سهمًا)، ثم اختاروا «إضافة إلى الشاشة الرئيسية»، واضغطوا على إضافة.",
   "Got it": "حسنًا",
   "To install: open Chrome’s ⋮ menu, tap ‘Install app’ (or ‘Add to Home screen’), then confirm Install.": "للتثبيت: افتحوا قائمة كروم ⋮، واضغطوا على «تثبيت التطبيق» (أو «الإضافة إلى الشاشة الرئيسية»)، ثم أكدوا التثبيت.",
-  "Emy Maany logo": "شعار إيمي معاني"
+  "Emy Maany logo": "شعار إيمي معاني",
+
+  "A glimpse of what we do": "نبذة بسيطة عن خدماتنا",
+  "WELCOME TO": "مرحبًا بكم في",
+  "A creative destination for beautifully curated celebrations, bespoke cakes, elegant event styling and thoughtful catering.": "وجهة إبداعية للاحتفالات المنسقة بعناية، والكعكات المصممة خصيصًا، وتنسيق المناسبات الراقي، وخدمات الضيافة المميزة.",
+  "DISCOVER OUR WORK": "اكتشفوا أعمالنا",
+  "A LITTLE ABOUT US": "نبذة عنا",
+  "01 / THE STORY": "01 / حكايتنا",
+  "Every celebration deserves": "كل احتفال يستحق",
+  "its own story.": "حكايته الخاصة.",
+  "At Emy Maany, we believe that the most beautiful occasions are built from thoughtful details. Every colour, flavour and finishing touch should feel connected to the people and moments being celebrated.": "في إيمي معاني، نؤمن بأن أجمل المناسبات تُصنع من تفاصيل مدروسة؛ فكل لون ومذاق ولمسة نهائية يجب أن تعكس أصحاب المناسبة واللحظات التي نحتفل بها.",
+  "From bespoke cakes and fine catering to event styling and decorations, we bring every element together with care, creativity and a personal touch.": "من الكعكات المصممة خصيصًا والضيافة الراقية إلى تنسيق المناسبات والديكورات، نجمع كل العناصر بعناية وإبداع ولمسة شخصية.",
+  "LET'S CREATE SOMETHING BEAUTIFUL": "لنصنع معًا شيئًا جميلًا"
 };
   const textState = new WeakMap();
   const attributeState = new WeakMap();
@@ -275,9 +287,10 @@
     const current = node.nodeValue;
     const previous = textState.get(node);
     const currentTrimmed = normalize(current);
-    const english = previous && currentTrimmed === previous.translated
+    const explicitKey = parent.getAttribute("data-i18n");
+    const english = explicitKey || (previous && currentTrimmed === previous.translated
       ? previous.english
-      : currentTrimmed;
+      : currentTrimmed);
     if (!english) return;
 
     const translated = isArabic() ? (translations[english] || english) : english;
@@ -331,13 +344,12 @@
 
   function updateLanguageControl() {
     document.querySelectorAll(".language-toggle").forEach(button => {
-      const label = button.querySelector("[data-language-label]");
-      if (label) label.textContent = isArabic() ? "English" : "العربية";
       const target = isArabic() ? "English" : "Arabic";
       const accessibleLabel = isArabic() ? "التبديل إلى اللغة الإنجليزية" : "Switch language to Arabic";
       button.setAttribute("aria-label", accessibleLabel);
       button.setAttribute("title", accessibleLabel);
       button.setAttribute("aria-pressed", String(isArabic()));
+      button.dataset.activeLanguage = isArabic() ? "ar" : "en";
     });
   }
 

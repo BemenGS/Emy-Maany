@@ -394,3 +394,22 @@ html[dir="rtl"] .back-to-top {
     line-height: 1;
     text-align: center;
 }
+
+
+/* =========================================================
+   RTL SLIDER IMAGE POSITION — preserve full product artwork.
+   Right-anchored elements mirror the LTR anchor and therefore
+   use a positive half-width translation on desktop/tablet.
+   Mobile keeps its centered layout and original translation.
+   ========================================================= */
+@media (min-width: 621px) {
+    html[dir="rtl"] .showcase-slide .showcase-product {
+        transform: translate(50%, -50%);
+    }
+}
+@media (min-width: 621px) and (max-width: 900px) {
+    html[dir="rtl"] .showcase-slide[data-slide="2"] .showcase-product,
+    html[dir="rtl"] .showcase-slide[data-slide="4"] .showcase-product {
+        transform: translate(50%, -50%);
+    }
+}

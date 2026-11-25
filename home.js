@@ -1,3 +1,4 @@
+/* HOME PAGE SCRIPT — menu, home interactions and reveal behavior. */
 /* =========================================================
    EMY SWEETS — HOME PAGE INTERACTIONS
    ========================================================= */

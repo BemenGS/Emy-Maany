@@ -1,4 +1,6 @@
+/* FILE: showcase.js | Styles and/or behavior for the Emy Maany website. */
 (() => {
+    // Slider elements and playback state
     const slides = [...document.querySelectorAll('.showcase-slide')];
     const tabs = [...document.querySelectorAll('.showcase-tabs button')];
     const current = document.getElementById('showcase-current');
@@ -7,6 +9,7 @@
     if (!slides.length) return;
     let active = 0, busy = false, timer, touchedAt = 0;
     const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // Switch the active slide and synchronise the tab navigation.
     function go(index, user = true) {
         if (busy) return;
         const target = (index + slides.length) % slides.length;
@@ -25,9 +28,11 @@
         }
         , reduced ? 0 : 680);
     }
+    // Previous/next buttons and direct category selection.
     prev?.addEventListener('click', () => go(active - 1));
     next?.addEventListener('click', () => go(active + 1));
     tabs.forEach((tab, i) => tab.addEventListener('click', () => go(i)));
+    // Keyboard navigation and touch-swipe support.
     document.addEventListener('keydown', e => {
         const rtl = document.documentElement.dir === 'rtl';
         if (e.key === 'ArrowLeft') go(active + (rtl ? 1 : -1));
@@ -53,6 +58,7 @@
         passive:true
     }
     );
+    // Auto-advance pauses briefly after manual interaction.
     timer = window.setInterval(() => {
         if (document.visibilityState === 'visible' && Date.now()-touchedAt>6000) go(active+1, false);
     }

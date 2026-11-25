@@ -10,8 +10,13 @@ manifest, page links and image references expect these paths.
 PAGE FILES
 ----------
 index.html
-  Home page structure: header/navigation, hero slider markup, introduction,
-  services, counters and footer.
+  Home page structure: header/navigation, Welcome section, About Emy Maany
+  section, services slider, introduction, services, counters and footer.
+
+CODE-INDEX-DARK.html
+  Dark-mode visual index of the HTML/CSS/JavaScript comment headings and their
+  exact current line numbers. Rebuild this index after adding, removing or
+  moving code comments or sections.
 
 home.css
   Home page visual design: global home-page styling, header, sections,
@@ -68,11 +73,12 @@ README-LANGUAGE-SYSTEM.txt
   Notes for maintaining translations, language persistence and PWA integration.
 
 pwa-install.css
-  Styling for the install banner shown by supported browsers.
+  Styling for the animated bottom install banner and centered platform guide
+  modal (Windows, Android and iPhone).
 
 pwa-install.js
-  PWA installation flow, iOS installation instructions and service-worker
-  registration.
+  PWA installation flow: animated banner, platform-specific modal instructions,
+  native install prompt handling, language updates and service-worker registration.
 
 service-worker.js
   Offline cache, app-shell installation and network-first asset handling.

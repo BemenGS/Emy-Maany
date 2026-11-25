@@ -1,3 +1,4 @@
+/* CONTACT PAGE SCRIPT — contact-page interactions and form validation. */
 /* =========================================================
    EMY SWEETS — CONTACT PAGE INTERACTIONS
    ========================================================= */

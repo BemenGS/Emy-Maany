@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- FILE: index.html | Page structure, semantics and content sections. -->
 <html lang="en">
  <head>
   <meta charset="utf-8"/>
@@ -29,11 +30,11 @@
   <meta content="yes" name="apple-mobile-web-app-capable"/>
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
   <meta content="Emy Maany" name="apple-mobile-web-app-title"/>
-  <link href="/manifest.webmanifest" rel="manifest"/>
-  <link href="/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
-  <link href="/icon-192.png" rel="icon" sizes="192x192" type="image/png"/>
-  <link href="/icon-192.png" rel="apple-touch-icon"/>
-  <link href="/pwa-install.css" rel="stylesheet"/>
+  <link href="manifest.webmanifest" rel="manifest"/>
+  <link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="icon-192.png" rel="icon" sizes="192x192" type="image/png"/>
+  <link href="icon-192.png" rel="apple-touch-icon"/>
+  <link href="pwa-install.css" rel="stylesheet"/>
   <link href="language.css" rel="stylesheet"/>
  </head>
  <body>
@@ -73,7 +74,7 @@
       <span class="theme-toggle-icon" aria-hidden="true">☾</span>
       <span class="theme-toggle-label">Dark</span>
      </button>
-     <button class="language-toggle" type="button" aria-label="Switch language to Arabic" title="Switch language to Arabic" aria-pressed="false"><span data-language-label data-no-translate>العربية</span></button>
+     <button class="language-toggle" type="button" aria-label="Switch language" title="Switch language" aria-pressed="false"><span class="language-switch-track"><span class="language-knob"></span><span class="language-option language-en">EN</span><span class="language-option language-ar">ع</span></span></button>
     <a class="active" href="index.html">
      <b>Home</b>
     </a>
@@ -86,8 +87,41 @@
    </nav>
   </header>
   <main>
+   <!-- =====================================================
+        HOME SECTION 01 — WELCOME / BRAND INTRODUCTION
+        ===================================================== -->
+   <section class="welcome-section section-pad" id="welcome" aria-labelledby="welcome-title">
+    <div class="welcome-inner">
+     <div class="welcome-logo-wrap"><img src="emy-maany-logo.png" alt="Emy Maany logo" class="welcome-logo" width="420" height="280"/></div>
+     <div class="welcome-copy">
+      <span class="eyebrow">WELCOME TO</span>
+      <h1 id="welcome-title"><span>Emy</span> Maany</h1>
+      <p class="welcome-tagline">Thoughtfully Made. Beautifully Remembered.</p>
+      <p class="welcome-description">A creative destination for beautifully curated celebrations, bespoke cakes, elegant event styling and thoughtful catering.</p>
+      <a class="welcome-link" href="work.html">DISCOVER OUR WORK <span aria-hidden="true">↗</span></a>
+     </div>
+    </div>
+   </section>
+
+   <!-- =====================================================
+        HOME SECTION 02 — ABOUT EMY MAANY
+        ===================================================== -->
+   <section class="about-intro section-pad" id="about-emy" aria-labelledby="about-emy-title">
+    <div class="about-intro-heading">
+     <span class="eyebrow">A LITTLE ABOUT US</span><span class="about-intro-rule" aria-hidden="true"></span><span class="about-intro-index">01 / THE STORY</span>
+    </div>
+    <div class="about-intro-grid">
+     <h2 id="about-emy-title">Every celebration deserves <em>its own story.</em></h2>
+     <div class="about-intro-copy">
+      <p>At Emy Maany, we believe that the most beautiful occasions are built from thoughtful details. Every colour, flavour and finishing touch should feel connected to the people and moments being celebrated.</p>
+      <p>From bespoke cakes and fine catering to event styling and decorations, we bring every element together with care, creativity and a personal touch.</p>
+      <a class="about-intro-link" href="contact.html">LET'S CREATE SOMETHING BEAUTIFUL <span aria-hidden="true">↗</span></a>
+     </div>
+    </div>
+   </section>
+
    <!-- PRODUCT HERO SLIDER -->
-   <section aria-label="Featured creations" class="showcase" id="showcase">
+   <section aria-label="Featured creations" class="showcase" id="showcase">/n    <div class="showcase-section-label"><span data-i18n="A glimpse of what we do">A glimpse of what we do</span></div>
     <div class="showcase-stage">
      <div aria-hidden="true" class="showcase-orbit">
      </div>
@@ -119,13 +153,13 @@
         Wedding
        </div>
        <div class="showcase-product">
-        <img alt="Italian celebration cake" src="italian cake\italian cake 3D.png"/>
+        <img alt="Italian celebration cake" src="italian cake/italian cake 3D.png"/>
        </div>
        <div aria-hidden="true" class="showcase-floats">
-        <img alt="" class="float f1" src="italian cake\Vibrant Red Rose Cutout.png"/>
-        <img alt="" class="float f2" src="italian cake\Triad of Reflective Gold Spheres.png"/>
-        <img alt="" class="float f3" src="italian cake\Glossy Pearl Sphere Cluster.png"/>
-        <img alt="" class="float f4" src="italian cake\Vibrant Red Rose Cutout.png"/>
+        <img alt="" class="float f1" src="italian cake/Vibrant Red Rose Cutout.png"/>
+        <img alt="" class="float f2" src="italian cake/Triad of Reflective Gold Spheres.png"/>
+        <img alt="" class="float f3" src="italian cake/Glossy Pearl Sphere Cluster.png"/>
+        <img alt="" class="float f4" src="italian cake/Vibrant Red Rose Cutout.png"/>
         
        </div>
        <span class="showcase-caption">
@@ -159,13 +193,13 @@
         Birthday
        </div>
        <div class="showcase-product">
-        <img alt="Animal themed birthday cake" src="animals\animals .png"/>
+        <img alt="Animal themed birthday cake" src="animals/animals .png"/>
        </div>
        <div aria-hidden="true" class="showcase-floats">
-        <img alt="" class="float f1" src="animals\elephant slider.png"/>
-        <img alt="" class="float f2" src="animals\giraffe slider.png"/>
-        <img alt="" class="float f3" src="animals\lion slider.png"/>
-        <img alt="" class="float f4" src="animals\monkey slider.png"/>
+        <img alt="" class="float f1" src="animals/elephant slider.png"/>
+        <img alt="" class="float f2" src="animals/giraffe slider.png"/>
+        <img alt="" class="float f3" src="animals/lion slider.png"/>
+        <img alt="" class="float f4" src="animals/monkey slider.png"/>
        </div>
        <span class="showcase-caption">
         A WORLD OF WONDER
@@ -525,7 +559,7 @@
   <script defer src="i18n.js"></script>
   <script defer="" src="site-enhancements.js">
   </script>
-  <!-- Shared dark/light theme behavior --> <script defer src="theme.js"></script>  <script defer="" src="/pwa-install.js">
+  <!-- Shared dark/light theme behavior --> <script defer src="theme.js"></script>  <script defer="" src="pwa-install.js">
   </script>
  </body>
 </html>
