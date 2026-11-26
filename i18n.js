@@ -47,7 +47,7 @@
   "SWEET DETAILS, FOREVER": "تفاصيل حلوة لا تُنسى",
   "THE TABLE, THOUGHTFULLY SET": "مائدة أُعدّت بعناية",
   "Fine": "ضيافة",
-  "Catering.": "راقية.",
+  "Catering.": "ضيافة.",
   "Delicious details and inviting bites, prepared for sharing.": "مذاقات شهية وتفاصيل مدروسة، أُعدّت لتجمع الأحبة.",
   "PREPARED TO BE SHARED": "أُعدّت لتُشارك",
   "THE SETTING FOR YOUR STORY": "أجواء تليق بحكايتكم",
@@ -108,7 +108,7 @@
   "Designed around your occasion and finished with an eye for detail. Our cakes bring together beautiful presentation and a delicious centre.": "نصمم كعكاتنا لتنسجم مع مناسبتكم، ونعتني بأدق تفاصيلها. تجمع إبداعاتنا بين التقديم الأنيق والمذاق الشهي.",
   "03 — THE TABLE": "03 — المائدة",
   "03 / 03": "03 / 03",
-  "Thoughtful catering.": "ضيافة مدروسة.",
+  "Thoughtful Catering.": "ضيافة مدروسة.",
   "From graceful grazing tables to a beautifully presented menu, we make the food part of the occasion — generous, considered and full of flavour.": "من موائد الضيافة المتنوعة إلى قوائم الطعام المقدمة بأناقة، نجعل الطعام جزءًا أصيلًا من روعة المناسبة، بسخاء وعناية ومذاق غني.",
   "THE COLLECTION": "المجموعة",
   "Project Title": "عنوان المشروع",
@@ -262,7 +262,14 @@
   "its own story.": "حكايته الخاصة.",
   "At Emy Maany, we believe that the most beautiful occasions are built from thoughtful details. Every colour, flavour and finishing touch should feel connected to the people and moments being celebrated.": "في إيمي معاني، نؤمن بأن أجمل المناسبات تُصنع من تفاصيل مدروسة؛ فكل لون ومذاق ولمسة نهائية يجب أن تعكس أصحاب المناسبة واللحظات التي نحتفل بها.",
   "From bespoke cakes and fine catering to event styling and decorations, we bring every element together with care, creativity and a personal touch.": "من الكعكات المصممة خصيصًا والضيافة الراقية إلى تنسيق المناسبات والديكورات، نجمع كل العناصر بعناية وإبداع ولمسة شخصية.",
-  "LET'S CREATE SOMETHING BEAUTIFUL": "لنصنع معًا شيئًا جميلًا"
+  "LET'S CREATE SOMETHING BEAUTIFUL": "لنصنع معًا شيئًا جميلًا",
+  "Boys Corner": "ركن الأولاد",
+  "Girls Corner": "ركن البنات",
+  "Adults Corner": "ركن الكبار",
+  "Birthday Cakes : Adults": "كعكات اعياد ميلاد الكبار",
+  "Valentine & Engagement Cakes": "كعكات عيد الحب و الخطوبة",
+  "The Love Collection": "تجميعة الحب",
+
 };
   const textState = new WeakMap();
   const attributeState = new WeakMap();
