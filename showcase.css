@@ -1015,3 +1015,9 @@
     }
 
 }
+
+/* Phrase-level event decor title keeps its refined accent treatment. */
+.showcase-event-decor-title span {
+    color: var(--slide-accent, #c9a76d);
+    font-style: italic;
+}

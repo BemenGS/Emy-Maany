@@ -439,3 +439,133 @@ html[dir="rtl"] .back-to-top {
         margin: 0;
     }
 }
+
+
+/* =========================================================
+   FINAL ARABIC TYPE SCALE + MOBILE SHOWCASE NAVIGATION
+   Keep Arabic hierarchy proportional to the English design.
+   ========================================================= */
+html[dir="rtl"] body {
+    font-size: 14px;
+}
+html[dir="rtl"] :is(p, li, .welcome-description, .about-intro-copy p,
+    .work-hero-content > p, .contact-hero-content > p, .portfolio-intro p,
+    .service-card p, .collection-card-title, .collection-card-kicker) {
+    font-size: 0.94em;
+    line-height: 1.85;
+}
+html[dir="rtl"] :is(.welcome-copy h1, .about-intro-grid h2,
+    .work-hero h1, .contact-hero h1, .portfolio-intro h2,
+    .contact-heading h2, .work-cta h2, .statement-inner h2) {
+    font-size: clamp(30px, 4.2vw, 54px);
+    line-height: 1.35;
+    font-weight: 500;
+}
+html[dir="rtl"] .showcase-copy h1 {
+    font-size: clamp(32px, 4.4vw, 58px);
+    line-height: 1.35;
+    margin-bottom: 14px;
+}
+html[dir="rtl"] .showcase-copy p {
+    font-size: 12px;
+    line-height: 1.8;
+}
+html[dir="rtl"] .showcase-kicker {
+    font-size: 10px;
+    line-height: 1.7;
+}
+html[dir="rtl"] .showcase-cta {
+    font-size: 10px;
+    letter-spacing: 0;
+}
+html[dir="rtl"] .showcase-event-decor-title span {
+    color: var(--slide-accent, #c9a76d);
+    font-style: italic;
+}
+@media (max-width: 620px) {
+    /* Five equal tab slots prevent clipping in either writing direction. */
+    .showcase-footer {
+        bottom: 7px;
+        left: 3.5%;
+        right: 3.5%;
+        row-gap: 5px;
+    }
+    .showcase-tabs {
+        display: grid !important;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        align-items: stretch;
+        justify-content: stretch;
+        gap: 3px !important;
+        width: 100%;
+        min-width: 0;
+        overflow: visible !important;
+    }
+    .showcase-tabs button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 0;
+        min-height: 30px;
+        padding: 7px 1px !important;
+        white-space: normal;
+        overflow-wrap: anywhere;
+        text-align: center;
+        font-size: clamp(7px, 1.9vw, 9px) !important;
+        line-height: 1.45;
+        letter-spacing: 0 !important;
+    }
+    .showcase-tabs button:after {
+        bottom: 1px;
+    }
+    html[dir="rtl"] .showcase-tabs {
+        direction: rtl;
+    }
+    html[dir="rtl"] .showcase-tabs button {
+        font-size: clamp(8px, 2.1vw, 10px) !important;
+        line-height: 1.5;
+        word-break: normal;
+    }
+    html[dir="rtl"] .showcase-copy h1 {
+        font-size: clamp(32px, 9vw, 48px);
+        line-height: 1.45;
+        margin-bottom: 10px;
+    }
+    html[dir="rtl"] .showcase-copy p {
+        font-size: 11px;
+        line-height: 1.8;
+    }
+    html[dir="rtl"] .welcome-copy h1 {
+        font-size: clamp(36px, 10vw, 54px);
+    }
+    html[dir="rtl"] .about-intro-grid h2 {
+        font-size: clamp(30px, 8vw, 42px);
+    }
+}
+
+
+/* Shared mobile close icon: identical strokes, common rotation centre,
+   original transition duration and menu animation preserved. */
+@media (max-width: 800px) {
+    .site-header .menu-toggle { position: relative !important; }
+    .site-header .menu-toggle span { transform-origin: center center; }
+    .site-header .menu-toggle[aria-expanded="true"] span {
+        position: absolute !important;
+        left: 50% !important;
+        top: 50% !important;
+        width: 28px !important;
+        height: 3px !important;
+        margin: 0 !important;
+    }
+    .site-header .menu-toggle[aria-expanded="true"] span:first-child {
+        transform: translate(-50%, -50%) rotate(45deg) !important;
+    }
+    .site-header .menu-toggle[aria-expanded="true"] span:last-child {
+        transform: translate(-50%, -50%) rotate(-45deg) !important;
+    }
+}
+
+
+html[dir="rtl"] .event-decorations-heading span {
+    color: var(--gold);
+    font-style: italic;
+}

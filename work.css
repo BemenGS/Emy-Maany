@@ -1132,3 +1132,9 @@ html[dir="rtl"] .brand-logo-frame {
         display: none;
     }
 }
+
+
+.event-decorations-heading span {
+    color: var(--gold);
+    font-style: italic;
+}
